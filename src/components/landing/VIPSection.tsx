@@ -4,13 +4,22 @@ import {
 } from 'lucide-react';
 import PatternOverlay from './PatternOverlay';
 
+const colorMap = {
+  "mad-pink": { num: "text-mad-pink", bg: "bg-mad-pink/20", bgHover: "group-hover:bg-mad-pink", icon: "text-mad-pink" },
+  "mad-purple": { num: "text-mad-purple", bg: "bg-mad-purple/20", bgHover: "group-hover:bg-mad-purple", icon: "text-mad-purple" },
+  "mad-blue": { num: "text-mad-blue", bg: "bg-mad-blue/20", bgHover: "group-hover:bg-mad-blue", icon: "text-mad-blue" },
+  "mad-green": { num: "text-mad-green", bg: "bg-mad-green/20", bgHover: "group-hover:bg-mad-green", icon: "text-mad-green" },
+} as const;
+
+type ColorKey = keyof typeof colorMap;
+
 const categories = [
-  { icon: Sparkles, label: "Recovery Zones", desc: "Spas & Massage Studios", color: "mad-pink", num: "01" },
-  { icon: Scissors, label: "Fresh Fades", desc: "Barber Shops", color: "mad-purple", num: "02" },
-  { icon: Utensils, label: "Local Eats", desc: "Restaurants & Cafés", color: "mad-blue", num: "03" },
-  { icon: Palmtree, label: "Sunset Sessions", desc: "Beach Bars & Nightlife", color: "mad-green", num: "04" },
-  { icon: Dumbbell, label: "Sweat Units", desc: "Wellness & Fitness Studios", color: "mad-pink", num: "05" },
-  { icon: ShoppingBag, label: "Style Spots", desc: "Lifestyle & Retail Stores", color: "mad-purple", num: "06" },
+  { icon: Sparkles, label: "Recovery Zones", desc: "Spas & Massage Studios", color: "mad-pink" as ColorKey, num: "01" },
+  { icon: Scissors, label: "Fresh Fades", desc: "Barber Shops", color: "mad-purple" as ColorKey, num: "02" },
+  { icon: Utensils, label: "Local Eats", desc: "Restaurants & Cafés", color: "mad-blue" as ColorKey, num: "03" },
+  { icon: Palmtree, label: "Sunset Sessions", desc: "Beach Bars & Nightlife", color: "mad-green" as ColorKey, num: "04" },
+  { icon: Dumbbell, label: "Sweat Units", desc: "Wellness & Fitness Studios", color: "mad-pink" as ColorKey, num: "05" },
+  { icon: ShoppingBag, label: "Style Spots", desc: "Lifestyle & Retail Stores", color: "mad-purple" as ColorKey, num: "06" },
 ];
 
 const tickerText = "SHOW THE BAND · SCORE THE GOODS · ";
