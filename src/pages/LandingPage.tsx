@@ -79,7 +79,7 @@ export default function LandingPage() {
           <motion.img
             src={goldenTicketHero}
             alt="The Golden Ticket (On Your Wrist) - Show The Band. Score The Goods."
-            className="w-80 sm:w-[28rem] md:w-[34rem] lg:w-[42rem] mx-auto -mb-6 sm:-mb-8 drop-shadow-2xl"
+            className="w-[22rem] sm:w-[32rem] md:w-[40rem] lg:w-[50rem] mx-auto -mb-6 sm:-mb-8 drop-shadow-2xl"
             initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
             animate={{ opacity: 1, scale: 1, rotate: -3 }}
             transition={{ duration: 0.7, type: "spring" }}
