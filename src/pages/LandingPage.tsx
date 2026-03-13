@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import {
-  Ticket,
-  MapPin,
-  Beer,
-  Coffee,
-  Scissors,
-  Dumbbell,
   Sparkles,
+  Scissors,
+  Utensils,
+  Palmtree,
+  Dumbbell,
+  ShoppingBag,
   ArrowRight,
-  CheckCircle2
+  Search,
+  Hand,
+  Trophy
 } from 'lucide-react';
 import bandMember from '@/assets/band-member.png';
 import bandMad from '@/assets/band-mad.png';
@@ -25,36 +26,25 @@ const fadeIn = {
 };
 
 const categories = [
-  { icon: Sparkles, label: "Spas & Massage" },
-  { icon: Beer, label: "Nightlife & Bars" },
-  { icon: Coffee, label: "Cafés & Eats" },
-  { icon: Scissors, label: "Barbers" },
-  { icon: Dumbbell, label: "Gyms & Wellness" },
-  { icon: Ticket, label: "Experiences" },
-  { icon: MapPin, label: "Tours" },
-  { icon: CheckCircle2, label: "Lifestyle Stores" },
+  { icon: Sparkles, label: "Recovery Zones", desc: "Spas & Massage Studios" },
+  { icon: Scissors, label: "Fresh Fades", desc: "Barber Shops" },
+  { icon: Utensils, label: "Local Eats", desc: "Restaurants & Cafés" },
+  { icon: Palmtree, label: "Sunset Sessions", desc: "Beach Bars & Nightlife" },
+  { icon: Dumbbell, label: "Sweat Units", desc: "Wellness & Fitness Studios" },
+  { icon: ShoppingBag, label: "Style Spots", desc: "Lifestyle & Retail Stores" },
 ];
 
 const steps = [
-  { step: "01", title: "Scope the Offers", desc: "Browse partner spots in your location." },
-  { step: "02", title: "Flex the Wrist", desc: "Show your loyalty wristband before paying." },
-  { step: "03", title: "Claim the Win", desc: "Unlock discounts, freebies and exclusive perks." },
+  { step: "01", icon: Search, title: "Scope the Offers", desc: "Browse our partner spots in your current location." },
+  { step: "02", icon: Hand, title: "Flex the Wrist", desc: "Show your Mad Monkey Loyalty Wristband before you order or pay." },
+  { step: "03", icon: Trophy, title: "Claim the Win", desc: "Walk away with exclusive discounts, freebies, and members-only deals." },
 ];
 
-const tiers = [
-  { img: bandMember, label: "Member Monkey", desc: "For new sign-ups who have NOT made a booking since signing up / completed website check-out as a GUEST / booked through an OTA." },
-  { img: bandMad, label: "Mad Monkey", desc: "Unlocked after completing direct stays with Mad Monkey." },
-  { img: bandMadder, label: "Madder Monkey", desc: "For frequent guests staying across multiple locations." },
-  { img: bandMaddest, label: "Maddest Monkey", desc: "Top tier travellers who stay the most and unlock premium perks." },
-];
-
-const partners = [
-  { name: "Zen Recovery Spa", offer: "10% off recovery massages", tag: "Massage Studios", img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop" },
-  { name: "Sunset Beach Club", offer: "Free shot with any cocktail", tag: "Beach Bars", img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=800&auto=format&fit=crop" },
-  { name: "Nomad Coffee Co.", offer: "Free upgrade to large", tag: "Cafés", img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop" },
-  { name: "Iron Paradise", offer: "Free day pass with band", tag: "Gyms", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" },
-  { name: "The Local Cut", offer: "15% off all haircuts", tag: "Barbers", img: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop" },
-  { name: "Mama's Kitchen", offer: "Free side with main meal", tag: "Restaurants", img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" },
+const bands = [
+  { img: bandMember, label: "Member Monkey" },
+  { img: bandMad, label: "Mad Monkey" },
+  { img: bandMadder, label: "Madder Monkey" },
+  { img: bandMaddest, label: "Maddest Monkey" },
 ];
 
 export default function LandingPage() {
@@ -110,7 +100,16 @@ export default function LandingPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-4 sm:mt-6 text-sm sm:text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto font-medium px-2"
           >
-            Welcome to the Mad Monkey Loyalty Program, your all-access pass to the best of our backyard. We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty — the fun kind.
+            Welcome to the Mad Monkey Loyalty Program, your all-access pass to the best of our backyard. We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty (the fun kind, not the stuffy kind).
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mt-3 text-sm sm:text-base text-gray-300 max-w-xl mx-auto font-medium"
+          >
+            No points to track, no apps to download. Just show the band and get the hookup.
           </motion.p>
 
           <motion.div
@@ -122,14 +121,11 @@ export default function LandingPage() {
             <button className="gradient-mad text-primary-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-lg">
               Sign Up For Free <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="bg-transparent border-2 border-primary-foreground text-primary-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
-              Explore Perks
-            </button>
           </motion.div>
         </div>
       </section>
 
-      {/* VIP Status Section */}
+      {/* Your Wristband = Instant VIP Status */}
       <section className="py-16 sm:py-24 bg-mad-dark text-mad-light px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-mad-purple/20 blur-[120px]" />
@@ -138,38 +134,41 @@ export default function LandingPage() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div {...fadeIn} className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-5xl md:text-7xl mb-4 sm:mb-6">Instant VIP Status</h2>
+            <h2 className="text-3xl sm:text-5xl md:text-7xl mb-4 sm:mb-6">
+              Your Wristband =<br className="sm:hidden" /> Instant VIP Status
+            </h2>
             <p className="text-base sm:text-xl text-gray-400 font-medium max-w-2xl mx-auto">
-              No points. No apps. No tracking. Just flash the band and unlock the city.
+              Whether you need to recover from last night or gear up for this evening, your MM Loyalty Wristband unlocks curated deals at our favorite:
             </p>
-            <div className="mt-6 sm:mt-8 inline-block px-4 sm:px-6 py-2 sm:py-3 border border-white/20 rounded-full text-sm sm:text-lg font-bold uppercase tracking-widest text-mad-pink transform rotate-1">
-              Recover from last night. Gear up for tonight.
-            </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
             {categories.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col items-center text-center hover:bg-white/10 transition-colors group"
+                transition={{ delay: i * 0.08 }}
+                className="bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-8 flex flex-col items-center text-center hover:bg-white/10 transition-colors group"
               >
-                <item.icon className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-4 text-gray-400 group-hover:text-mad-light transition-colors" />
-                <span className="font-bold uppercase tracking-wider text-xs sm:text-sm">{item.label}</span>
+                <item.icon className="w-8 h-8 sm:w-12 sm:h-12 mb-3 sm:mb-4 text-mad-pink group-hover:text-mad-light transition-colors" />
+                <span className="font-bold uppercase tracking-wider text-xs sm:text-sm text-mad-light">{item.label}</span>
+                <span className="text-gray-400 text-xs sm:text-sm mt-1">{item.desc}</span>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How to Live the Dream */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeIn} className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-5xl md:text-7xl text-foreground">How It Works</h2>
+            <h2 className="text-3xl sm:text-5xl md:text-7xl text-foreground mb-3">How to Live the Dream</h2>
+            <p className="text-base sm:text-lg text-muted-foreground font-medium">
+              Getting your perks is easier than finding the hostel bar.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 relative">
@@ -187,7 +186,7 @@ export default function LandingPage() {
                   {item.step}
                 </div>
                 <h3 className="text-2xl sm:text-3xl mb-2 sm:mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-base sm:text-lg font-medium">{item.desc}</p>
+                <p className="text-muted-foreground text-sm sm:text-lg font-medium max-w-xs">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -196,84 +195,33 @@ export default function LandingPage() {
 
       {/* Wristband Tiers */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-mad-light overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div {...fadeIn} className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-5xl lg:text-7xl text-foreground mb-3">Choose Your Weapon</h2>
-            <p className="text-base sm:text-xl text-muted-foreground font-medium">Four tiers. Endless chaos. Level up by staying with us.</p>
+            <h2 className="text-3xl sm:text-5xl lg:text-7xl text-foreground mb-3">Choose Your Level</h2>
+            <p className="text-base sm:text-xl text-muted-foreground font-medium">Level up by staying with us. Each tier unlocks bigger perks.</p>
           </motion.div>
 
-          <div className="space-y-4 sm:space-y-6">
-            {tiers.map((tier, i) => (
+          <div className="space-y-3 sm:space-y-5">
+            {bands.map((band, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="group"
               >
-                <p className="text-sm font-bold text-foreground mb-2 ml-1">● {tier.label}</p>
                 <img
-                  src={tier.img}
-                  alt={`${tier.label} wristband`}
+                  src={band.img}
+                  alt={`${band.label} wristband`}
                   className="w-full h-auto hover:scale-[1.02] transition-transform cursor-pointer"
                 />
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1 ml-1 italic opacity-0 group-hover:opacity-100 transition-opacity">
-                  {tier.desc}
-                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Partner Locations Grid - The Hit List */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card">
-        <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeIn} className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4 sm:gap-6">
-            <div>
-              <h2 className="text-3xl sm:text-5xl md:text-7xl text-foreground mb-2 sm:mb-4">The Hit List</h2>
-              <p className="text-base sm:text-xl text-muted-foreground font-medium">Where to flash your band.</p>
-            </div>
-            <button className="text-foreground font-bold uppercase tracking-wider border-b-2 border-foreground pb-1 hover:text-mad-purple hover:border-mad-purple transition-colors self-start md:self-auto text-sm sm:text-base">
-              View All Partners
-            </button>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {partners.map((partner, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group rounded-xl sm:rounded-2xl overflow-hidden bg-secondary border border-border hover:shadow-xl transition-all hover:-translate-y-1"
-              >
-                <div className="h-40 sm:h-48 overflow-hidden relative">
-                  <img
-                    src={partner.img}
-                    alt={partner.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-card/90 backdrop-blur-sm px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-                    {partner.tag}
-                  </div>
-                </div>
-                <div className="p-4 sm:p-6">
-                  <h3 className="font-display text-xl sm:text-2xl mb-2">{partner.name}</h3>
-                  <div className="inline-block bg-yellow-100 text-yellow-800 px-2.5 sm:px-3 py-1 rounded-md font-bold text-xs sm:text-sm">
-                    {partner.offer}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
+      {/* CTA */}
       <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-mad-dark">
         <div className="absolute inset-0">
           <img
@@ -285,7 +233,7 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-mad-dark via-mad-dark/80 to-transparent" />
         </div>
 
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
+        <div className="max-w-3xl mx-auto relative z-10 text-center">
           <motion.h2
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -301,23 +249,18 @@ export default function LandingPage() {
             transition={{ delay: 0.1 }}
             className="text-base sm:text-xl md:text-2xl text-gray-300 font-medium mb-8 sm:mb-12"
           >
-            Join Mad Loyalty and start unlocking perks across the Mad Monkey universe.
+            No points. No apps. Just show the band and get the hookup.
           </motion.p>
 
-          <motion.div
+          <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0"
+            className="gradient-mad text-primary-foreground px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(232,0,214,0.3)]"
           >
-            <button className="gradient-mad text-primary-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(232,0,214,0.3)]">
-              Sign Up For Free
-            </button>
-            <button className="bg-transparent border-2 border-mad-light text-mad-light px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider hover:bg-white/10 transition-colors">
-              See All Partner Deals
-            </button>
-          </motion.div>
+            Sign Up For Free
+          </motion.button>
         </div>
       </section>
 
