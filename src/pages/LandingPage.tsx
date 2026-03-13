@@ -20,6 +20,7 @@ const tiers = [
     tierName: "MEMBER",
     tierNameColor: "text-mad-dark",
     madMonkeyColor: "text-mad-dark",
+    bandImg: bandMember,
     badgeImg: "https://madmonkeyhostels.com/_next/image?url=https%3A%2F%2Fmadmonkeyhostels.com%2Fimages%2Fmember_loyalty_badge.png&w=64&q=75&dpl=dpl_EqeCF7V2z3Hy6Fk1taRydYvoXXd6",
     levelUp: "Create an account to unlock Member level and perks",
   },
