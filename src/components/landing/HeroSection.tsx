@@ -6,10 +6,7 @@ import PatternOverlay from './PatternOverlay';
 export default function HeroSection() {
   return (
     <section className="relative pt-16 pb-16 sm:pt-20 sm:pb-24 lg:pt-28 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-background">
-      {/* Subtle pattern background */}
       <PatternOverlay className="opacity-15" />
-
-      {/* Soft color blobs */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-mad-purple/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-mad-pink/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -48,7 +45,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-6 sm:mt-8 flex justify-center"
         >
-          <button className="bg-accent text-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-display text-base sm:text-lg uppercase tracking-wider shadow-[0_6px_0_0_hsl(var(--mad-dark))] hover:shadow-[0_3px_0_0_hsl(var(--mad-dark))] hover:translate-y-[3px] transition-all border-3 border-foreground flex items-center justify-center gap-2">
+          <button className="gradient-mad text-primary-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-lg">
             Sign Up For Free <ArrowRight className="w-5 h-5" />
           </button>
         </motion.div>
