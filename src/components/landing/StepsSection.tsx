@@ -17,7 +17,7 @@ const steps = [
 
 export default function StepsSection() {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card overflow-hidden relative">
+    <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card overflow-hidden relative">
       {/* Side image on larger screens */}
       <img
         src={heroBackground}
