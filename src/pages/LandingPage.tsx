@@ -17,6 +17,7 @@ import bandMad from '@/assets/band-mad.png';
 import bandMadder from '@/assets/band-madder.png';
 import bandMaddest from '@/assets/band-maddest.png';
 import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
+import goldenTicket from '@/assets/golden-ticket.png';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
