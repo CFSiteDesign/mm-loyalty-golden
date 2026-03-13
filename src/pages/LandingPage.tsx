@@ -5,6 +5,7 @@ import bandMember from '@/assets/band-member.png';
 import bandMad from '@/assets/band-mad.png';
 import bandMadder from '@/assets/band-madder.png';
 import bandMaddest from '@/assets/band-maddest.png';
+import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
