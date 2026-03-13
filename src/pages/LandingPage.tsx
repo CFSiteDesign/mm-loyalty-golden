@@ -44,10 +44,38 @@ const steps = [
 ];
 
 const tiers = [
-  { color: "bg-emerald-500", shadow: "shadow-emerald-500/20", text: "text-emerald-900", label: "Member Monkey", desc: "For new sign-ups who have not yet completed a direct booking.", bandText: "mad monkey — MEMBER" },
-  { color: "bg-mad-purple", shadow: "shadow-mad-purple/20", text: "text-purple-900", label: "Mad Monkey", desc: "Unlocked after completing direct stays with Mad Monkey.", bandText: "mad monkey — MAD" },
-  { color: "bg-mad-blue", shadow: "shadow-mad-blue/20", text: "text-blue-900", label: "Madder Monkey", desc: "For frequent guests staying across multiple locations.", bandText: "mad monkey — MADDER" },
-  { color: "bg-mad-pink", shadow: "shadow-mad-pink/20", text: "text-pink-900", label: "Maddest Monkey", desc: "Top tier travellers who stay the most and unlock premium perks.", bandText: "mad monkey — MADDEST" },
+  {
+    gradient: "linear-gradient(135deg, #4ADE80, #2DD4BF, #06B6D4)",
+    label: "Member Monkey",
+    tierName: "MEMBER",
+    tierNameColor: "text-mad-dark",
+    madMonkeyColor: "text-mad-dark",
+    desc: "For new sign-ups who have NOT made a booking since signing up / completed website check-out as a GUEST / booked through an OTA.",
+  },
+  {
+    gradient: "linear-gradient(135deg, #A78BFA, #C084FC, #E879F9)",
+    label: "Mad Monkey",
+    tierName: "MAD",
+    tierNameColor: "text-yellow-300",
+    madMonkeyColor: "text-mad-dark",
+    desc: "Unlocked after completing direct stays with Mad Monkey.",
+  },
+  {
+    gradient: "linear-gradient(135deg, #60A5FA, #818CF8, #E879F9)",
+    label: "Madder Monkey",
+    tierName: "MADDER",
+    tierNameColor: "text-yellow-300",
+    madMonkeyColor: "text-mad-dark",
+    desc: "For frequent guests staying across multiple locations.",
+  },
+  {
+    gradient: "linear-gradient(135deg, #F472B6, #EC4899, #F59E0B)",
+    label: "Maddest Monkey",
+    tierName: "MADDEST",
+    tierNameColor: "text-yellow-300",
+    madMonkeyColor: "text-yellow-300",
+    desc: "Top tier travellers who stay the most and unlock premium perks.",
+  },
 ];
 
 const partners = [
