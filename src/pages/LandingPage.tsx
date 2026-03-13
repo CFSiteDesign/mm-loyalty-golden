@@ -140,7 +140,7 @@ export default function LandingPage() {
       </div>
 
       {/* Your Wristband = Instant VIP Status */}
-      <section className="pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-24 bg-mad-dark text-mad-light px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-20 sm:pt-28 lg:pt-32 pb-16 sm:pb-24 bg-mad-dark text-mad-light px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-mad-purple/20 blur-[120px]" />
           <div className="absolute bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full bg-mad-pink/20 blur-[100px]" />
