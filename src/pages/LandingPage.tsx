@@ -84,29 +84,25 @@ export default function LandingPage() {
             transition={{ duration: 0.7, type: "spring" }}
           />
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm sm:text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto font-medium px-2"
+            className="max-w-lg mx-auto bg-black/30 backdrop-blur-sm rounded-2xl p-5 sm:p-6 space-y-3"
           >
-            Welcome to the Mad Monkey Loyalty Program, your all-access pass to the best of our backyard. We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty (the fun kind, not the stuffy kind).
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="mt-3 text-sm sm:text-base text-gray-300 max-w-xl mx-auto font-medium"
-          >
-            No points to track, no apps to download. Just show the band and get the hookup.
-          </motion.p>
+            <p className="text-sm sm:text-base text-gray-100 font-medium leading-relaxed">
+              Your all-access pass to the best of our backyard. We've teamed up with local legends so that as long as you're wearing that wristband, you're treated like royalty <span className="text-gray-300 italic">(the fun kind, not the stuffy kind).</span>
+            </p>
+            <p className="text-xs sm:text-sm text-mad-pink font-bold uppercase tracking-wider">
+              No points · No apps · Just show the band
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0"
+            className="mt-6 sm:mt-8 flex justify-center"
           >
             <button className="gradient-mad text-primary-foreground px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-lg">
               Sign Up For Free <ArrowRight className="w-5 h-5" />
