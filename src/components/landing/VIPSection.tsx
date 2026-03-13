@@ -5,21 +5,21 @@ import {
 import PatternOverlay from './PatternOverlay';
 
 const colorMap = {
-  "mad-pink": { num: "text-mad-pink", bg: "bg-mad-pink/20", bgHover: "group-hover:bg-mad-pink", icon: "text-mad-pink" },
-  "mad-purple": { num: "text-mad-purple", bg: "bg-mad-purple/20", bgHover: "group-hover:bg-mad-purple", icon: "text-mad-purple" },
-  "mad-blue": { num: "text-mad-blue", bg: "bg-mad-blue/20", bgHover: "group-hover:bg-mad-blue", icon: "text-mad-blue" },
-  "mad-green": { num: "text-mad-green", bg: "bg-mad-green/20", bgHover: "group-hover:bg-mad-green", icon: "text-mad-green" },
+  "mad-pink": { icon: "text-mad-pink", border: "border-mad-pink/40 hover:border-mad-pink", bg: "bg-mad-pink/10 hover:bg-mad-pink/20" },
+  "mad-purple": { icon: "text-mad-purple", border: "border-mad-purple/40 hover:border-mad-purple", bg: "bg-mad-purple/10 hover:bg-mad-purple/20" },
+  "mad-blue": { icon: "text-mad-blue", border: "border-mad-blue/40 hover:border-mad-blue", bg: "bg-mad-blue/10 hover:bg-mad-blue/20" },
+  "mad-green": { icon: "text-mad-green", border: "border-mad-green/40 hover:border-mad-green", bg: "bg-mad-green/10 hover:bg-mad-green/20" },
 } as const;
 
 type ColorKey = keyof typeof colorMap;
 
 const categories = [
-  { icon: Sparkles, label: "Recovery Zones", desc: "Spas & Massage Studios", color: "mad-pink" as ColorKey, num: "01" },
-  { icon: Scissors, label: "Fresh Fades", desc: "Barber Shops", color: "mad-purple" as ColorKey, num: "02" },
-  { icon: Utensils, label: "Local Eats", desc: "Restaurants & Cafés", color: "mad-blue" as ColorKey, num: "03" },
-  { icon: Palmtree, label: "Sunset Sessions", desc: "Beach Bars & Nightlife", color: "mad-green" as ColorKey, num: "04" },
-  { icon: Dumbbell, label: "Sweat Units", desc: "Wellness & Fitness Studios", color: "mad-pink" as ColorKey, num: "05" },
-  { icon: ShoppingBag, label: "Style Spots", desc: "Lifestyle & Retail Stores", color: "mad-purple" as ColorKey, num: "06" },
+  { icon: Sparkles, label: "Recovery Zones", desc: "Spas & Massage Studios", color: "mad-pink" as ColorKey },
+  { icon: Scissors, label: "Fresh Fades", desc: "Barber Shops", color: "mad-purple" as ColorKey },
+  { icon: Utensils, label: "Local Eats", desc: "Restaurants & Cafés", color: "mad-blue" as ColorKey },
+  { icon: Palmtree, label: "Sunset Sessions", desc: "Beach Bars & Nightlife", color: "mad-green" as ColorKey },
+  { icon: Dumbbell, label: "Sweat Units", desc: "Wellness & Fitness Studios", color: "mad-pink" as ColorKey },
+  { icon: ShoppingBag, label: "Style Spots", desc: "Lifestyle & Retail Stores", color: "mad-purple" as ColorKey },
 ];
 
 const tickerText = "SHOW THE BAND · SCORE THE GOODS · ";
@@ -58,8 +58,8 @@ export default function VIPSection() {
         </div>
       </div>
 
-      {/* Category rows — menu-board style */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+      {/* Categories — pill tag cloud */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -69,44 +69,23 @@ export default function VIPSection() {
           Whether you need to recover from last night or gear up for tonight — your wristband unlocks curated deals at:
         </motion.p>
 
-        <div className="space-y-0">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
           {categories.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="group border-b border-mad-light/10 first:border-t"
+              initial={{ opacity: 0, scale: 0.8, rotate: -3 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08, type: "spring", stiffness: 200 }}
+              className={`group relative px-5 py-3 sm:px-7 sm:py-4 rounded-full border-2 ${colorMap[item.color].border} ${colorMap[item.color].bg} cursor-default transition-all duration-300 hover:scale-105 hover:-rotate-1`}
             >
-              <div className="flex items-center gap-3 sm:gap-5 py-4 sm:py-5 cursor-default hover:pl-2 transition-all duration-300">
-                {/* Number */}
-                <span className={`font-display text-lg sm:text-2xl text-mad-light/20 group-hover:${colorMap[item.color].num} transition-colors w-8 sm:w-10 shrink-0`}>
-                  {item.num}
-                </span>
-
-                {/* Icon pill */}
-                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colorMap[item.color].bg} ${colorMap[item.color].bgHover} flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg`}>
-                  <item.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${colorMap[item.color].icon} group-hover:text-primary-foreground transition-colors`} />
-                </div>
-
-                {/* Label */}
-                <div className="flex-1 min-w-0">
-                  <span className="font-display text-xl sm:text-3xl md:text-4xl text-mad-light group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-mad-gradient-start group-hover:to-mad-gradient-end transition-all block leading-tight truncate">
-                    {item.label}
-                  </span>
-                </div>
-
-                {/* Description */}
-                <span className="hidden sm:block text-xs sm:text-sm text-mad-light/30 group-hover:text-mad-light/60 transition-colors font-medium uppercase tracking-wider shrink-0">
-                  {item.desc}
-                </span>
-
-                {/* Arrow */}
-                <span className="text-mad-light/10 group-hover:text-mad-light/60 transition-all group-hover:translate-x-1 text-xl sm:text-2xl shrink-0">
-                  →
-                </span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${colorMap[item.color].icon}`} />
+                <span className="font-display text-base sm:text-xl text-mad-light tracking-wide">{item.label}</span>
               </div>
+              <span className="block text-[10px] sm:text-xs text-mad-light/40 font-medium mt-0.5 text-center tracking-wider uppercase">
+                {item.desc}
+              </span>
             </motion.div>
           ))}
         </div>
