@@ -32,14 +32,14 @@ export default function VIPSection() {
       <div className="absolute bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full bg-mad-pink/20 blur-[100px] pointer-events-none" />
 
       {/* Heading */}
-      <div className="relative z-10 pt-16 sm:pt-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center mb-6 sm:mb-10">
+      <div className="relative z-10 pt-12 sm:pt-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center mb-4 sm:mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl sm:text-6xl md:text-8xl mb-3 sm:mb-4 leading-[0.9]"
+            className="text-3xl sm:text-6xl md:text-8xl mb-2 sm:mb-4 leading-[0.9]"
           >
             Your Wristband =<br />
             <span className="text-transparent bg-clip-text gradient-mad bg-gradient-to-r from-mad-gradient-start to-mad-gradient-end">Instant VIP Status</span>
@@ -48,7 +48,7 @@ export default function VIPSection() {
       </div>
 
       {/* Marquee ticker */}
-      <div className="relative z-10 border-y border-mad-light/10 py-3 sm:py-4 mb-10 sm:mb-16 overflow-hidden">
+      <div className="relative z-10 border-y border-mad-light/10 py-2 sm:py-4 mb-8 sm:mb-16 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...Array(4)].map((_, i) => (
             <span key={i} className="text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-mad-light/40 mx-0">
@@ -59,17 +59,17 @@ export default function VIPSection() {
       </div>
 
       {/* Categories — pill tag cloud */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+      <div className="relative z-10 max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 pb-12 sm:pb-24">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-sm sm:text-base text-mad-light/50 font-medium text-center mb-8 sm:mb-12 max-w-lg mx-auto"
+          className="text-xs sm:text-base text-mad-light/50 font-medium text-center mb-6 sm:mb-12 max-w-lg mx-auto"
         >
           Whether you need to recover from last night or gear up for tonight — your wristband unlocks curated deals at:
         </motion.p>
 
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
           {categories.map((item, i) => (
             <motion.div
               key={i}
@@ -77,13 +77,13 @@ export default function VIPSection() {
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08, type: "spring", stiffness: 200 }}
-              className={`group relative px-5 py-3 sm:px-7 sm:py-4 rounded-full border-2 ${colorMap[item.color].border} ${colorMap[item.color].bg} cursor-default transition-all duration-300 hover:scale-105 hover:-rotate-1`}
+              className={`group relative px-3.5 py-2.5 sm:px-7 sm:py-4 rounded-full border-2 ${colorMap[item.color].border} ${colorMap[item.color].bg} cursor-default transition-all duration-300 hover:scale-105 hover:-rotate-1`}
             >
-              <div className="flex items-center gap-2 sm:gap-3">
-                <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${colorMap[item.color].icon}`} />
-                <span className="font-display text-base sm:text-xl text-mad-light tracking-wide">{item.label}</span>
+              <div className="flex items-center gap-1.5 sm:gap-3">
+                <item.icon className={`w-3.5 h-3.5 sm:w-5 sm:h-5 ${colorMap[item.color].icon}`} />
+                <span className="font-display text-sm sm:text-xl text-mad-light tracking-wide">{item.label}</span>
               </div>
-              <span className="block text-[10px] sm:text-xs text-mad-light/40 font-medium mt-0.5 text-center tracking-wider uppercase">
+              <span className="block text-[9px] sm:text-xs text-mad-light/40 font-medium mt-0.5 text-center tracking-wider uppercase">
                 {item.desc}
               </span>
             </motion.div>

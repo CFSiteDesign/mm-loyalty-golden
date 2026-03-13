@@ -4,7 +4,7 @@ import PatternOverlay from './PatternOverlay';
 
 export default function CTASection() {
   return (
-    <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-mad-dark">
+    <section className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-mad-dark">
       <PatternOverlay className="opacity-10" />
       <div className="absolute inset-0">
         <img
@@ -21,7 +21,7 @@ export default function CTASection() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-6xl md:text-8xl text-mad-light mb-4 sm:mb-6"
+          className="text-3xl sm:text-6xl md:text-8xl text-mad-light mb-3 sm:mb-6"
         >
           READY TO WEAR THE BAND?
         </motion.h2>
@@ -30,7 +30,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-base sm:text-xl md:text-2xl text-mad-light/70 font-medium mb-8 sm:mb-12"
+          className="text-sm sm:text-xl md:text-2xl text-mad-light/70 font-medium mb-6 sm:mb-12"
         >
           No points. No apps. Just show the band and get the hookup.
         </motion.p>
@@ -40,7 +40,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="gradient-mad text-primary-foreground px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(232,0,214,0.3)]"
+          className="gradient-mad text-primary-foreground px-6 sm:px-10 py-3.5 sm:py-5 rounded-full font-bold text-sm sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(232,0,214,0.3)]"
         >
           Sign Up For Free
         </motion.button>

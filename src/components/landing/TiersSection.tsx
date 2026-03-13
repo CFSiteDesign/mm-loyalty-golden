@@ -21,16 +21,16 @@ const bands = [
 
 export default function TiersSection() {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden relative">
+    <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden relative">
       <PatternOverlay className="opacity-10" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <motion.div {...fadeIn} className="text-center mb-10 sm:mb-16">
-          <h2 className="text-3xl sm:text-5xl lg:text-7xl text-foreground mb-3">Level Up Your Wristband</h2>
-          <p className="text-base sm:text-xl text-muted-foreground font-medium">Stay longer, unlock more. Each tier drops bigger perks and wilder hookups.</p>
+        <motion.div {...fadeIn} className="text-center mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-5xl lg:text-7xl text-foreground mb-2">Level Up Your Wristband</h2>
+          <p className="text-xs sm:text-xl text-muted-foreground font-medium">Stay longer, unlock more. Each tier drops bigger perks and wilder hookups.</p>
         </motion.div>
 
-        <div className="space-y-3 sm:space-y-5">
+        <div className="space-y-2 sm:space-y-5">
           {bands.map((band, i) => (
             <motion.div
               key={i}

@@ -17,7 +17,7 @@ const steps = [
 
 export default function StepsSection() {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card overflow-hidden relative">
+    <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card overflow-hidden relative">
       {/* Side image on larger screens */}
       <img
         src={heroBackground}
@@ -27,9 +27,9 @@ export default function StepsSection() {
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div {...fadeIn} className="text-center mb-10 sm:mb-14">
-          <h2 className="text-3xl sm:text-5xl md:text-7xl text-foreground mb-3">How to Live the Dream</h2>
-          <p className="text-base sm:text-lg text-muted-foreground font-medium">
+        <motion.div {...fadeIn} className="text-center mb-8 sm:mb-14">
+          <h2 className="text-2xl sm:text-5xl md:text-7xl text-foreground mb-2">How to Live the Dream</h2>
+          <p className="text-xs sm:text-lg text-muted-foreground font-medium">
             Getting your perks is easier than finding the hostel bar.
           </p>
         </motion.div>
@@ -50,13 +50,13 @@ export default function StepsSection() {
                 <div className="md:hidden absolute left-6 top-14 w-0.5 h-full bg-gradient-to-b from-mad-purple/30 to-transparent z-0" />
               )}
 
-              <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-24 md:h-24 ${item.color} text-primary-foreground rounded-full flex items-center justify-center font-display text-lg sm:text-xl md:text-4xl flex-shrink-0 shadow-xl border-4 border-card relative z-10`}>
+              <div className={`w-10 h-10 sm:w-14 sm:h-14 md:w-24 md:h-24 ${item.color} text-primary-foreground rounded-full flex items-center justify-center font-display text-sm sm:text-xl md:text-4xl flex-shrink-0 shadow-xl border-4 border-card relative z-10`}>
                 {item.step}
               </div>
 
-              <div className="flex-1 pb-8 md:pb-0">
-                <h3 className="text-lg sm:text-xl md:text-3xl mb-1 md:mb-3 text-foreground">{item.title}</h3>
-                <p className="text-muted-foreground text-sm md:text-lg font-medium max-w-xs">{item.desc}</p>
+              <div className="flex-1 pb-6 md:pb-0">
+                <h3 className="text-base sm:text-xl md:text-3xl mb-0.5 md:mb-3 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground text-xs md:text-lg font-medium max-w-xs">{item.desc}</p>
               </div>
             </motion.div>
           ))}
