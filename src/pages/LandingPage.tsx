@@ -20,6 +20,7 @@ import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
 import goldenTicket from '@/assets/golden-ticket.png';
 import goldenTicketHero from '@/assets/golden-ticket-hero.png';
 import ctaBackground from '@/assets/cta-background.jpg';
+import heroBackground from '@/assets/hero-background.jpg';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -68,10 +69,9 @@ export default function LandingPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-black/80 to-pink-900/90 mix-blend-multiply z-10" />
           <img
-            src="https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?q=80&w=3174&auto=format&fit=crop"
-            alt="Backpackers at a tropical hostel pool party"
+           src={heroBackground}
+            alt="Backpackers with wristbands at a tropical SE Asia pool party"
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
         </div>
 
