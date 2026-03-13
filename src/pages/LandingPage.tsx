@@ -224,8 +224,8 @@ export default function LandingPage() {
       <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-mad-dark">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=3174&auto=format&fit=crop"
-            alt="Party crowd"
+            src={ctaBackground}
+            alt="Backpackers with wristbands at a tropical beach party"
             className="w-full h-full object-cover opacity-30"
             referrerPolicy="no-referrer"
           />
