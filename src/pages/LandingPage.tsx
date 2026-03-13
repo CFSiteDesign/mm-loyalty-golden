@@ -50,6 +50,7 @@ const tiers = [
     tierName: "MADDEST",
     tierNameColor: "text-yellow-300",
     madMonkeyColor: "text-yellow-300",
+    bandImg: bandMaddest,
     badgeImg: "https://madmonkeyhostels.com/_next/image?url=https%3A%2F%2Fmadmonkeyhostels.com%2Fimages%2Fmaddest_loyalty_badge.png&w=64&q=75&dpl=dpl_EqeCF7V2z3Hy6Fk1taRydYvoXXd6",
     levelUp: "Book 5 properties to unlock the Maddest level and perks",
   },
