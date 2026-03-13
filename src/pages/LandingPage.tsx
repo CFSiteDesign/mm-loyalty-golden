@@ -131,7 +131,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-6xl sm:text-7xl lg:text-9xl text-primary-foreground mb-6 leading-[0.85] tracking-tight"
+            className="text-[clamp(2.5rem,10vw,9rem)] text-primary-foreground mb-6 leading-[0.85] tracking-tight whitespace-nowrap"
           >
             SHOW YOUR BAND.<br />
             <span className="text-gradient-hero">
