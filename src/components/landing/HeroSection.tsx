@@ -5,7 +5,7 @@ import PatternOverlay from './PatternOverlay';
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-16 pb-16 sm:pt-20 sm:pb-24 lg:pt-28 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-background">
+    <section className="relative pt-20 pb-12 sm:pt-20 sm:pb-24 lg:pt-28 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-background">
       <PatternOverlay className="opacity-15" />
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-mad-purple/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-mad-pink/10 rounded-full blur-3xl pointer-events-none" />
