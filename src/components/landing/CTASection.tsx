@@ -21,7 +21,7 @@ export default function CTASection() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-6xl md:text-8xl text-mad-light mb-4 sm:mb-6"
+          className="text-3xl sm:text-6xl md:text-8xl text-mad-light mb-3 sm:mb-6"
         >
           READY TO WEAR THE BAND?
         </motion.h2>
