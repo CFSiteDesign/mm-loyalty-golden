@@ -239,7 +239,7 @@ export default function LandingPage() {
             <p className="text-xl text-muted-foreground font-medium">Four tiers. Endless chaos. Level up by staying with us.</p>
           </motion.div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {tiers.map((tier, i) => (
               <motion.div 
                 key={i}
@@ -249,26 +249,38 @@ export default function LandingPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group relative"
               >
-                <div className={`w-full h-24 sm:h-32 ${tier.color} rounded-xl sm:rounded-full flex items-center overflow-hidden shadow-2xl ${tier.shadow} transform transition-transform group-hover:scale-[1.02] cursor-pointer relative`}>
-                  <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E")' }} />
+                {/* Tier label */}
+                <p className="text-sm font-bold text-foreground mb-2 ml-2">
+                  <span className="mr-1">●</span> {tier.label}:
+                </p>
+                {/* Wristband */}
+                <div 
+                  className="w-full h-16 sm:h-20 rounded-lg sm:rounded-full flex items-center overflow-hidden shadow-lg transform transition-transform group-hover:scale-[1.02] cursor-pointer relative px-6 sm:px-10"
+                  style={{ background: tier.gradient }}
+                >
+                  {/* Fabric texture overlay */}
+                  <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'4\' height=\'4\' viewBox=\'0 0 4 4\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h1v1H0zm2 2h1v1H2z\' fill=\'%23000\' fill-opacity=\'.3\'/%3E%3C/svg%3E")' }} />
                   
-                  <div className="flex whitespace-nowrap overflow-hidden w-full">
-                    <div className="animate-marquee flex items-center">
-                      {[...Array(10)].map((_, j) => (
-                        <span key={j} className={`font-display text-4xl sm:text-6xl ${tier.text} opacity-50 mx-8 tracking-widest`}>
-                          {tier.bandText}
-                        </span>
-                      ))}
-                    </div>
+                  {/* Left: "mad monkey" */}
+                  <span className={`font-display text-2xl sm:text-4xl ${tier.madMonkeyColor} tracking-wider flex-1`}>
+                    mad monkey
+                  </span>
+
+                  {/* Center: Monkey logo placeholder */}
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-mad-dark/20 flex items-center justify-center mx-4 sm:mx-8 flex-shrink-0">
+                    <span className="text-2xl sm:text-3xl">🐵</span>
                   </div>
 
-                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center sm:rounded-full backdrop-blur-sm">
-                    <div>
-                      <h3 className="text-mad-light text-2xl sm:text-3xl mb-2">{tier.label}</h3>
-                      <p className="text-gray-300 font-medium text-sm sm:text-base max-w-md mx-auto">{tier.desc}</p>
-                    </div>
-                  </div>
+                  {/* Right: Tier name */}
+                  <span className={`font-display text-3xl sm:text-5xl ${tier.tierNameColor} tracking-wider text-right flex-1`}>
+                    {tier.tierName}
+                  </span>
                 </div>
+
+                {/* Description on hover */}
+                <p className="text-sm text-muted-foreground mt-1 ml-2 italic opacity-0 group-hover:opacity-100 transition-opacity">
+                  {tier.desc}
+                </p>
               </motion.div>
             ))}
           </div>
