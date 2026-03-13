@@ -27,8 +27,8 @@ export default function StepsSection() {
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div {...fadeIn} className="text-center mb-10 sm:mb-14">
-          <h2 className="text-3xl sm:text-5xl md:text-7xl text-foreground mb-3">How to Live the Dream</h2>
+        <motion.div {...fadeIn} className="text-center mb-8 sm:mb-14">
+          <h2 className="text-2xl sm:text-5xl md:text-7xl text-foreground mb-2">How to Live the Dream</h2>
           <p className="text-base sm:text-lg text-muted-foreground font-medium">
             Getting your perks is easier than finding the hostel bar.
           </p>
