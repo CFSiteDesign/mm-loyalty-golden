@@ -26,7 +26,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-xl mx-auto"
         >
-          <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed font-medium tracking-wide">
+          <p className="text-sm sm:text-lg md:text-xl text-foreground/80 leading-relaxed font-medium tracking-wide">
             Your all-access pass to the best of our backyard. We've teamed up with local legends so that as long as you're wearing that wristband, you're treated like royalty{' '}
             <span className="text-muted-foreground italic">(the fun kind, not the stuffy kind).</span>
           </p>
