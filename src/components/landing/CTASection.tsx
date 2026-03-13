@@ -4,7 +4,7 @@ import PatternOverlay from './PatternOverlay';
 
 export default function CTASection() {
   return (
-    <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-mad-dark">
+    <section className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-mad-dark">
       <PatternOverlay className="opacity-10" />
       <div className="absolute inset-0">
         <img
