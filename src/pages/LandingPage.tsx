@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ChevronRight, Beer, Utensils, Gem, Hotel, Gift, Percent, Clock, PartyPopper } from 'lucide-react';
+import bandMember from '@/assets/band-member.png';
+import bandMad from '@/assets/band-mad.png';
+import bandMadder from '@/assets/band-madder.png';
+import bandMaddest from '@/assets/band-maddest.png';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
