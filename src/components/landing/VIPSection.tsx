@@ -77,13 +77,13 @@ export default function VIPSection() {
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08, type: "spring", stiffness: 200 }}
-              className={`group relative px-5 py-3 sm:px-7 sm:py-4 rounded-full border-2 ${colorMap[item.color].border} ${colorMap[item.color].bg} cursor-default transition-all duration-300 hover:scale-105 hover:-rotate-1`}
+              className={`group relative px-3.5 py-2.5 sm:px-7 sm:py-4 rounded-full border-2 ${colorMap[item.color].border} ${colorMap[item.color].bg} cursor-default transition-all duration-300 hover:scale-105 hover:-rotate-1`}
             >
-              <div className="flex items-center gap-2 sm:gap-3">
-                <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${colorMap[item.color].icon}`} />
-                <span className="font-display text-base sm:text-xl text-mad-light tracking-wide">{item.label}</span>
+              <div className="flex items-center gap-1.5 sm:gap-3">
+                <item.icon className={`w-3.5 h-3.5 sm:w-5 sm:h-5 ${colorMap[item.color].icon}`} />
+                <span className="font-display text-sm sm:text-xl text-mad-light tracking-wide">{item.label}</span>
               </div>
-              <span className="block text-[10px] sm:text-xs text-mad-light/40 font-medium mt-0.5 text-center tracking-wider uppercase">
+              <span className="block text-[9px] sm:text-xs text-mad-light/40 font-medium mt-0.5 text-center tracking-wider uppercase">
                 {item.desc}
               </span>
             </motion.div>

@@ -30,7 +30,7 @@ export default function TiersSection() {
           <p className="text-xs sm:text-xl text-muted-foreground font-medium">Stay longer, unlock more. Each tier drops bigger perks and wilder hookups.</p>
         </motion.div>
 
-        <div className="space-y-3 sm:space-y-5">
+        <div className="space-y-2 sm:space-y-5">
           {bands.map((band, i) => (
             <motion.div
               key={i}

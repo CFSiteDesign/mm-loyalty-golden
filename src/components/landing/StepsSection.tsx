@@ -54,9 +54,9 @@ export default function StepsSection() {
                 {item.step}
               </div>
 
-              <div className="flex-1 pb-8 md:pb-0">
-                <h3 className="text-lg sm:text-xl md:text-3xl mb-1 md:mb-3 text-foreground">{item.title}</h3>
-                <p className="text-muted-foreground text-sm md:text-lg font-medium max-w-xs">{item.desc}</p>
+              <div className="flex-1 pb-6 md:pb-0">
+                <h3 className="text-base sm:text-xl md:text-3xl mb-0.5 md:mb-3 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground text-xs md:text-lg font-medium max-w-xs">{item.desc}</p>
               </div>
             </motion.div>
           ))}
