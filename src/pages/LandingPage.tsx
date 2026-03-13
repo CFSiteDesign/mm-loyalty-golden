@@ -212,8 +212,8 @@ export default function LandingPage() {
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-mad-light overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeIn} className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-5xl lg:text-7xl text-foreground mb-3">Choose Your Level</h2>
-            <p className="text-base sm:text-xl text-muted-foreground font-medium">Level up by staying with us. Each tier unlocks bigger perks.</p>
+            <h2 className="text-3xl sm:text-5xl lg:text-7xl text-foreground mb-3">Level Up Your Wristband</h2>
+            <p className="text-base sm:text-xl text-muted-foreground font-medium">Stay longer, unlock more. Each tier drops bigger perks and wilder hookups.</p>
           </motion.div>
 
           <div className="space-y-3 sm:space-y-5">
