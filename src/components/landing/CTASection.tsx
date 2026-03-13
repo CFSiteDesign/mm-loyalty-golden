@@ -30,7 +30,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-base sm:text-xl md:text-2xl text-mad-light/70 font-medium mb-8 sm:mb-12"
+          className="text-sm sm:text-xl md:text-2xl text-mad-light/70 font-medium mb-6 sm:mb-12"
         >
           No points. No apps. Just show the band and get the hookup.
         </motion.p>
