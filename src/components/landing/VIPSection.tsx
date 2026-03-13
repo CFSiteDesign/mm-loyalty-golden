@@ -5,21 +5,21 @@ import {
 import PatternOverlay from './PatternOverlay';
 
 const colorMap = {
-  "mad-pink": { num: "text-mad-pink", bg: "bg-mad-pink/20", bgHover: "group-hover:bg-mad-pink", icon: "text-mad-pink" },
-  "mad-purple": { num: "text-mad-purple", bg: "bg-mad-purple/20", bgHover: "group-hover:bg-mad-purple", icon: "text-mad-purple" },
-  "mad-blue": { num: "text-mad-blue", bg: "bg-mad-blue/20", bgHover: "group-hover:bg-mad-blue", icon: "text-mad-blue" },
-  "mad-green": { num: "text-mad-green", bg: "bg-mad-green/20", bgHover: "group-hover:bg-mad-green", icon: "text-mad-green" },
+  "mad-pink": { icon: "text-mad-pink", border: "border-mad-pink/40 hover:border-mad-pink", bg: "bg-mad-pink/10 hover:bg-mad-pink/20" },
+  "mad-purple": { icon: "text-mad-purple", border: "border-mad-purple/40 hover:border-mad-purple", bg: "bg-mad-purple/10 hover:bg-mad-purple/20" },
+  "mad-blue": { icon: "text-mad-blue", border: "border-mad-blue/40 hover:border-mad-blue", bg: "bg-mad-blue/10 hover:bg-mad-blue/20" },
+  "mad-green": { icon: "text-mad-green", border: "border-mad-green/40 hover:border-mad-green", bg: "bg-mad-green/10 hover:bg-mad-green/20" },
 } as const;
 
 type ColorKey = keyof typeof colorMap;
 
 const categories = [
-  { icon: Sparkles, label: "Recovery Zones", desc: "Spas & Massage Studios", color: "mad-pink" as ColorKey, num: "01" },
-  { icon: Scissors, label: "Fresh Fades", desc: "Barber Shops", color: "mad-purple" as ColorKey, num: "02" },
-  { icon: Utensils, label: "Local Eats", desc: "Restaurants & Cafés", color: "mad-blue" as ColorKey, num: "03" },
-  { icon: Palmtree, label: "Sunset Sessions", desc: "Beach Bars & Nightlife", color: "mad-green" as ColorKey, num: "04" },
-  { icon: Dumbbell, label: "Sweat Units", desc: "Wellness & Fitness Studios", color: "mad-pink" as ColorKey, num: "05" },
-  { icon: ShoppingBag, label: "Style Spots", desc: "Lifestyle & Retail Stores", color: "mad-purple" as ColorKey, num: "06" },
+  { icon: Sparkles, label: "Recovery Zones", desc: "Spas & Massage Studios", color: "mad-pink" as ColorKey },
+  { icon: Scissors, label: "Fresh Fades", desc: "Barber Shops", color: "mad-purple" as ColorKey },
+  { icon: Utensils, label: "Local Eats", desc: "Restaurants & Cafés", color: "mad-blue" as ColorKey },
+  { icon: Palmtree, label: "Sunset Sessions", desc: "Beach Bars & Nightlife", color: "mad-green" as ColorKey },
+  { icon: Dumbbell, label: "Sweat Units", desc: "Wellness & Fitness Studios", color: "mad-pink" as ColorKey },
+  { icon: ShoppingBag, label: "Style Spots", desc: "Lifestyle & Retail Stores", color: "mad-purple" as ColorKey },
 ];
 
 const tickerText = "SHOW THE BAND · SCORE THE GOODS · ";
