@@ -50,7 +50,7 @@ export default function StepsSection() {
                 <div className="md:hidden absolute left-6 top-14 w-0.5 h-full bg-gradient-to-b from-mad-purple/30 to-transparent z-0" />
               )}
 
-              <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-24 md:h-24 ${item.color} text-primary-foreground rounded-full flex items-center justify-center font-display text-lg sm:text-xl md:text-4xl flex-shrink-0 shadow-xl border-4 border-card relative z-10`}>
+              <div className={`w-10 h-10 sm:w-14 sm:h-14 md:w-24 md:h-24 ${item.color} text-primary-foreground rounded-full flex items-center justify-center font-display text-sm sm:text-xl md:text-4xl flex-shrink-0 shadow-xl border-4 border-card relative z-10`}>
                 {item.step}
               </div>
 
