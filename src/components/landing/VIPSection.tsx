@@ -64,7 +64,7 @@ export default function VIPSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-sm sm:text-base text-mad-light/50 font-medium text-center mb-8 sm:mb-12 max-w-lg mx-auto"
+          className="text-xs sm:text-base text-mad-light/50 font-medium text-center mb-6 sm:mb-12 max-w-lg mx-auto"
         >
           Whether you need to recover from last night or gear up for tonight — your wristband unlocks curated deals at:
         </motion.p>
