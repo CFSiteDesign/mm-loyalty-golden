@@ -59,7 +59,7 @@ export default function VIPSection() {
       </div>
 
       {/* Categories — pill tag cloud */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+      <div className="relative z-10 max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 pb-12 sm:pb-24">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
