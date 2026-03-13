@@ -320,10 +320,7 @@ export default function LandingPage() {
       <footer className="bg-mad-dark text-gray-400 py-10 sm:py-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center">
-            <div className="w-12 h-12 bg-mad-light rounded-full flex items-center justify-center mb-4">
-              <span className="text-mad-dark font-display text-2xl leading-none mt-1">M</span>
-            </div>
-            <p className="font-display text-xl text-mad-light mb-2">Mad Monkey</p>
+            <img src={madMonkeyLogo} alt="Mad Monkey" className="h-10 brightness-0 invert mb-4" />
             <p className="text-xs">All rights reserved © Mad Monkey. {new Date().getFullYear()}</p>
           </div>
         </div>
