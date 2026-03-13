@@ -305,23 +305,13 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="group"
+                className="hover:scale-[1.02] transition-transform cursor-pointer"
               >
-                <div
-                  className="w-full h-14 sm:h-20 rounded-lg sm:rounded-full flex items-center overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-[1.01] cursor-pointer relative px-4 sm:px-10"
-                  style={{ background: tier.gradient }}
-                >
-                  <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'4\' height=\'4\' viewBox=\'0 0 4 4\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h1v1H0zm2 2h1v1H2z\' fill=\'%23000\' fill-opacity=\'.3\'/%3E%3C/svg%3E")' }} />
-                  <span className={`font-display text-lg sm:text-4xl ${tier.madMonkeyColor} tracking-wider flex-1`}>
-                    mad monkey
-                  </span>
-                  <div className="w-8 h-8 sm:w-14 sm:h-14 rounded-full bg-mad-dark/20 flex items-center justify-center mx-2 sm:mx-8 flex-shrink-0">
-                    <span className="text-xl sm:text-3xl">🐵</span>
-                  </div>
-                  <span className={`font-display text-xl sm:text-5xl ${tier.tierNameColor} tracking-wider text-right flex-1`}>
-                    {tier.tierName}
-                  </span>
-                </div>
+                <img
+                  src={tier.bandImg}
+                  alt={`${tier.label} wristband`}
+                  className="w-full h-auto"
+                />
               </motion.div>
             ))}
           </div>
