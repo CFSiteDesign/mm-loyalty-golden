@@ -81,13 +81,13 @@ export default function VIPSection() {
             >
               <div className="flex items-center gap-3 sm:gap-5 py-4 sm:py-5 cursor-default hover:pl-2 transition-all duration-300">
                 {/* Number */}
-                <span className={`font-display text-lg sm:text-2xl text-mad-light/20 group-hover:text-${item.color} transition-colors w-8 sm:w-10 shrink-0`}>
+                <span className={`font-display text-lg sm:text-2xl text-mad-light/20 group-hover:${colorMap[item.color].num} transition-colors w-8 sm:w-10 shrink-0`}>
                   {item.num}
                 </span>
 
                 {/* Icon pill */}
-                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-${item.color}/20 group-hover:bg-${item.color} flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg`}>
-                  <item.icon className={`w-5 h-5 sm:w-6 sm:h-6 text-${item.color} group-hover:text-primary-foreground transition-colors`} />
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colorMap[item.color].bg} ${colorMap[item.color].bgHover} flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg`}>
+                  <item.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${colorMap[item.color].icon} group-hover:text-primary-foreground transition-colors`} />
                 </div>
 
                 {/* Label */}
@@ -97,7 +97,7 @@ export default function VIPSection() {
                   </span>
                 </div>
 
-                {/* Description — hidden on small, visible on hover or always on md+ */}
+                {/* Description */}
                 <span className="hidden sm:block text-xs sm:text-sm text-mad-light/30 group-hover:text-mad-light/60 transition-colors font-medium uppercase tracking-wider shrink-0">
                   {item.desc}
                 </span>
