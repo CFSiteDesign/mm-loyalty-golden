@@ -69,7 +69,7 @@ export default function VIPSection() {
           Whether you need to recover from last night or gear up for tonight — your wristband unlocks curated deals at:
         </motion.p>
 
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
           {categories.map((item, i) => (
             <motion.div
               key={i}
