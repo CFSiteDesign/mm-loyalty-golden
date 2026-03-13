@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ChevronRight, Beer, Utensils, Gem, Hotel, Gift, Percent, Clock, PartyPopper } from 'lucide-react';
+import bandMember from '@/assets/band-member.png';
+import bandMad from '@/assets/band-mad.png';
+import bandMadder from '@/assets/band-madder.png';
+import bandMaddest from '@/assets/band-maddest.png';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -16,6 +20,7 @@ const tiers = [
     tierName: "MEMBER",
     tierNameColor: "text-mad-dark",
     madMonkeyColor: "text-mad-dark",
+    bandImg: bandMember,
     badgeImg: "https://madmonkeyhostels.com/_next/image?url=https%3A%2F%2Fmadmonkeyhostels.com%2Fimages%2Fmember_loyalty_badge.png&w=64&q=75&dpl=dpl_EqeCF7V2z3Hy6Fk1taRydYvoXXd6",
     levelUp: "Create an account to unlock Member level and perks",
   },
@@ -25,6 +30,7 @@ const tiers = [
     tierName: "MAD",
     tierNameColor: "text-yellow-300",
     madMonkeyColor: "text-mad-dark",
+    bandImg: bandMad,
     badgeImg: "https://madmonkeyhostels.com/_next/image?url=https%3A%2F%2Fmadmonkeyhostels.com%2Fimages%2Fmad_loyalty_badge.png&w=64&q=75&dpl=dpl_EqeCF7V2z3Hy6Fk1taRydYvoXXd6",
     levelUp: "Book 1 property to unlock the Mad level and perks",
   },
@@ -34,6 +40,7 @@ const tiers = [
     tierName: "MADDER",
     tierNameColor: "text-yellow-300",
     madMonkeyColor: "text-mad-dark",
+    bandImg: bandMadder,
     badgeImg: "https://madmonkeyhostels.com/_next/image?url=https%3A%2F%2Fmadmonkeyhostels.com%2Fimages%2Fmadder_loyalty_badge.png&w=64&q=75&dpl=dpl_EqeCF7V2z3Hy6Fk1taRydYvoXXd6",
     levelUp: "Book 3 properties to unlock the Madder level and perks",
   },
@@ -43,6 +50,7 @@ const tiers = [
     tierName: "MADDEST",
     tierNameColor: "text-yellow-300",
     madMonkeyColor: "text-yellow-300",
+    bandImg: bandMaddest,
     badgeImg: "https://madmonkeyhostels.com/_next/image?url=https%3A%2F%2Fmadmonkeyhostels.com%2Fimages%2Fmaddest_loyalty_badge.png&w=64&q=75&dpl=dpl_EqeCF7V2z3Hy6Fk1taRydYvoXXd6",
     levelUp: "Book 5 properties to unlock the Maddest level and perks",
   },
@@ -297,23 +305,13 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="group"
+                className="hover:scale-[1.02] transition-transform cursor-pointer"
               >
-                <div
-                  className="w-full h-14 sm:h-20 rounded-lg sm:rounded-full flex items-center overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-[1.01] cursor-pointer relative px-4 sm:px-10"
-                  style={{ background: tier.gradient }}
-                >
-                  <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'4\' height=\'4\' viewBox=\'0 0 4 4\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h1v1H0zm2 2h1v1H2z\' fill=\'%23000\' fill-opacity=\'.3\'/%3E%3C/svg%3E")' }} />
-                  <span className={`font-display text-lg sm:text-4xl ${tier.madMonkeyColor} tracking-wider flex-1`}>
-                    mad monkey
-                  </span>
-                  <div className="w-8 h-8 sm:w-14 sm:h-14 rounded-full bg-mad-dark/20 flex items-center justify-center mx-2 sm:mx-8 flex-shrink-0">
-                    <span className="text-xl sm:text-3xl">🐵</span>
-                  </div>
-                  <span className={`font-display text-xl sm:text-5xl ${tier.tierNameColor} tracking-wider text-right flex-1`}>
-                    {tier.tierName}
-                  </span>
-                </div>
+                <img
+                  src={tier.bandImg}
+                  alt={`${tier.label} wristband`}
+                  className="w-full h-auto"
+                />
               </motion.div>
             ))}
           </div>
