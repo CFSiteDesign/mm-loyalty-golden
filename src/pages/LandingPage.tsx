@@ -156,19 +156,23 @@ export default function LandingPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
+          <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-5">
             {categories.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-8 flex flex-col items-center text-center hover:bg-white/10 transition-colors group"
+                transition={{ delay: i * 0.06, duration: 0.4 }}
+                className="flex items-center gap-4 sm:flex-col sm:items-center sm:text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-8 hover:bg-white/10 hover:border-mad-pink/30 transition-all group"
               >
-                <item.icon className="w-8 h-8 sm:w-12 sm:h-12 mb-3 sm:mb-4 text-mad-pink group-hover:text-mad-light transition-colors" />
-                <span className="font-bold uppercase tracking-wider text-xs sm:text-sm text-mad-light">{item.label}</span>
-                <span className="text-gray-400 text-xs sm:text-sm mt-1">{item.desc}</span>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-mad-pink/20 to-mad-purple/20 flex items-center justify-center flex-shrink-0 group-hover:from-mad-pink/30 group-hover:to-mad-purple/30 transition-all">
+                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-mad-pink group-hover:text-mad-light transition-colors" />
+                </div>
+                <div className="sm:mt-2">
+                  <span className="font-bold uppercase tracking-wider text-xs sm:text-sm text-mad-light block">{item.label}</span>
+                  <span className="text-gray-400 text-xs sm:text-sm mt-0.5 block">{item.desc}</span>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -176,31 +180,39 @@ export default function LandingPage() {
       </section>
 
       {/* How to Live the Dream */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeIn} className="text-center mb-10 sm:mb-16">
+          <motion.div {...fadeIn} className="text-center mb-10 sm:mb-14">
             <h2 className="text-3xl sm:text-5xl md:text-7xl text-foreground mb-3">How to Live the Dream</h2>
             <p className="text-base sm:text-lg text-muted-foreground font-medium">
               Getting your perks is easier than finding the hostel bar.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 relative">
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-secondary -translate-y-1/2 z-0" />
+          <div className="flex flex-col gap-0 md:grid md:grid-cols-3 md:gap-12 relative">
+            <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-mad-pink/40 via-mad-purple/40 to-mad-pink/40 z-0" />
+
             {steps.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="relative z-10 flex flex-col items-center text-center"
+                transition={{ duration: 0.4, delay: i * 0.12 }}
+                className="relative z-10 flex items-start gap-4 md:flex-col md:items-center md:text-center"
               >
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-mad-dark text-mad-light rounded-full flex items-center justify-center font-display text-3xl sm:text-4xl mb-4 sm:mb-6 shadow-xl border-4 border-card">
+                {i < steps.length - 1 && (
+                  <div className="md:hidden absolute left-6 top-14 w-0.5 h-full bg-gradient-to-b from-mad-purple/30 to-transparent z-0" />
+                )}
+
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-24 md:h-24 bg-mad-dark text-mad-light rounded-full flex items-center justify-center font-display text-lg sm:text-xl md:text-4xl flex-shrink-0 shadow-lg border-2 md:border-4 border-card relative z-10">
                   {item.step}
                 </div>
-                <h3 className="text-2xl sm:text-3xl mb-2 sm:mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm sm:text-lg font-medium max-w-xs">{item.desc}</p>
+
+                <div className="flex-1 pb-8 md:pb-0">
+                  <h3 className="text-lg sm:text-xl md:text-3xl mb-1 md:mb-3 text-foreground">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm md:text-lg font-medium max-w-xs">{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
