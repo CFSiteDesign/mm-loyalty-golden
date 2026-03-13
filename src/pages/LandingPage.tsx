@@ -121,11 +121,8 @@ export default function LandingPage() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-mad-dark rounded-full flex items-center justify-center">
-              <span className="text-mad-light font-display text-xl leading-none mt-1">M</span>
-            </div>
-            <span className="font-display text-lg sm:text-2xl tracking-wide mt-1">MAD MONKEY</span>
+          <div className="flex items-center">
+            <img src={madMonkeyLogo} alt="Mad Monkey" className="h-8 sm:h-10" />
           </div>
           <button className="gradient-mad text-primary-foreground px-4 sm:px-5 py-2 rounded-full font-bold text-xs sm:text-sm uppercase tracking-wider hover:opacity-90 transition-opacity">
             Sign Up Free
