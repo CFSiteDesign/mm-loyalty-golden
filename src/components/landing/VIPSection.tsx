@@ -32,14 +32,14 @@ export default function VIPSection() {
       <div className="absolute bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full bg-mad-pink/20 blur-[100px] pointer-events-none" />
 
       {/* Heading */}
-      <div className="relative z-10 pt-16 sm:pt-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center mb-6 sm:mb-10">
+      <div className="relative z-10 pt-12 sm:pt-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center mb-4 sm:mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl sm:text-6xl md:text-8xl mb-3 sm:mb-4 leading-[0.9]"
+            className="text-3xl sm:text-6xl md:text-8xl mb-2 sm:mb-4 leading-[0.9]"
           >
             Your Wristband =<br />
             <span className="text-transparent bg-clip-text gradient-mad bg-gradient-to-r from-mad-gradient-start to-mad-gradient-end">Instant VIP Status</span>
