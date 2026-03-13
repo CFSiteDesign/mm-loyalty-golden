@@ -89,14 +89,19 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-lg mx-auto bg-black/30 backdrop-blur-sm rounded-2xl p-5 sm:p-6 space-y-3"
+            className="max-w-xl mx-auto"
           >
-            <p className="text-sm sm:text-base text-gray-100 font-medium leading-relaxed">
-              Your all-access pass to the best of our backyard. We've teamed up with local legends so that as long as you're wearing that wristband, you're treated like royalty <span className="text-gray-300 italic">(the fun kind, not the stuffy kind).</span>
+            <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-medium tracking-wide">
+              Your all-access pass to the best of our backyard. We've teamed up with local legends so that as long as you're wearing that wristband, you're treated like royalty{' '}
+              <span className="text-gray-400 italic">(the fun kind, not the stuffy kind).</span>
             </p>
-            <p className="text-xs sm:text-sm text-mad-pink font-bold uppercase tracking-wider">
-              No points · No apps · Just show the band
-            </p>
+            <div className="mt-5 sm:mt-6 flex items-center justify-center gap-3 sm:gap-4">
+              <span className="h-px flex-1 max-w-[3rem] bg-gradient-to-r from-transparent to-mad-pink/60" />
+              <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-mad-pink whitespace-nowrap">
+                No points · No apps · Just show the band
+              </p>
+              <span className="h-px flex-1 max-w-[3rem] bg-gradient-to-l from-transparent to-mad-pink/60" />
+            </div>
           </motion.div>
 
           <motion.div
