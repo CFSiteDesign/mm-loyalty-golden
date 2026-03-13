@@ -21,7 +21,7 @@ const bands = [
 
 export default function TiersSection() {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden relative">
+    <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden relative">
       <PatternOverlay className="opacity-10" />
 
       <div className="max-w-5xl mx-auto relative z-10">
