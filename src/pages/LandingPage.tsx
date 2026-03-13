@@ -19,6 +19,7 @@ import bandMaddest from '@/assets/band-maddest.svg';
 import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
 import goldenTicket from '@/assets/golden-ticket.png';
 import goldenTicketHero from '@/assets/golden-ticket-hero.png';
+import ctaBackground from '@/assets/cta-background.jpg';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
