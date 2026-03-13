@@ -40,6 +40,7 @@ const tiers = [
     tierName: "MADDER",
     tierNameColor: "text-yellow-300",
     madMonkeyColor: "text-mad-dark",
+    bandImg: bandMadder,
     badgeImg: "https://madmonkeyhostels.com/_next/image?url=https%3A%2F%2Fmadmonkeyhostels.com%2Fimages%2Fmadder_loyalty_badge.png&w=64&q=75&dpl=dpl_EqeCF7V2z3Hy6Fk1taRydYvoXXd6",
     levelUp: "Book 3 properties to unlock the Madder level and perks",
   },
