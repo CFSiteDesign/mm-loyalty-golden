@@ -78,7 +78,7 @@ export default function LandingPage() {
           <motion.img
             src={goldenTicketHero}
             alt="The Golden Ticket (On Your Wrist) - Show The Band. Score The Goods."
-            className="w-72 sm:w-96 md:w-[28rem] lg:w-[36rem] mx-auto mb-4 sm:mb-6 drop-shadow-2xl"
+            className="w-80 sm:w-[28rem] md:w-[34rem] lg:w-[42rem] mx-auto -mb-6 sm:-mb-8 drop-shadow-2xl"
             initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
             animate={{ opacity: 1, scale: 1, rotate: -3 }}
             transition={{ duration: 0.7, type: "spring" }}
@@ -88,7 +88,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 sm:mt-6 text-sm sm:text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto font-medium px-2"
+            className="text-sm sm:text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto font-medium px-2"
           >
             Welcome to the Mad Monkey Loyalty Program, your all-access pass to the best of our backyard. We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty (the fun kind, not the stuffy kind).
           </motion.p>
