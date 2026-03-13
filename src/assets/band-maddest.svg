@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="140" viewBox="0 0 1600 140" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="70" x2="1600" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EE61FF"/>
+      <stop offset="1" stop-color="#E22FFF"/>
+    </linearGradient>
+    <pattern id="texture" patternUnits="userSpaceOnUse" width="28" height="28">
+      <path d="M-4 16 Q3 2 10 16 T24 16 T38 16" stroke="white" stroke-opacity="0.2" stroke-width="1.8" fill="none"/>
+      <path d="M-4 24 Q3 10 10 24 T24 24 T38 24" stroke="white" stroke-opacity="0.14" stroke-width="1.6" fill="none"/>
+    </pattern>
+    <filter id="soft" x="-10%" y="-40%" width="120%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#soft)">
+    <rect width="1600" height="140" rx="4" fill="url(#bg)"/>
+    <rect width="1600" height="140" rx="4" fill="url(#texture)"/>
+
+    <polygon points="0,0 60,0 110,140 0,140" fill="#D7EB00" opacity="0.9"/>
+    <polygon points="1490,0 1600,0 1600,140 1540,140" fill="#D7EB00" opacity="0.88"/>
+
+    <text x="170" y="88" font-family="Montserrat, Poppins, Arial, sans-serif" font-size="62" font-weight="700" letter-spacing="0.5" fill="#EFFF30">mad monkey</text>
+
+    <g transform="translate(800 70)">
+      <circle r="36" fill="white"/>
+      <circle cx="-20" cy="-5" r="12" fill="#111"/>
+      <circle cx="20" cy="-5" r="12" fill="#111"/>
+      <circle cx="0" cy="0" r="23" fill="#111"/>
+      <circle cx="-7" cy="-3" r="3" fill="white"/>
+      <circle cx="7" cy="-3" r="3" fill="white"/>
+      <path d="M-10 8 Q0 16 10 8" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      <path d="M0 -29 L8 -24 L0 -20 Z" fill="#111"/>
+    </g>
+
+    <text x="960" y="89" font-family="Montserrat, Poppins, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="1" fill="#EFFF30">MADDEST</text>
+  </g>
+</svg>
