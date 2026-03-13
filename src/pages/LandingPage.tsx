@@ -5,6 +5,7 @@ import bandMember from '@/assets/band-member.png';
 import bandMad from '@/assets/band-mad.png';
 import bandMadder from '@/assets/band-madder.png';
 import bandMaddest from '@/assets/band-maddest.png';
+import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -120,11 +121,8 @@ export default function LandingPage() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-mad-dark rounded-full flex items-center justify-center">
-              <span className="text-mad-light font-display text-xl leading-none mt-1">M</span>
-            </div>
-            <span className="font-display text-lg sm:text-2xl tracking-wide mt-1">MAD MONKEY</span>
+          <div className="flex items-center">
+            <img src={madMonkeyLogo} alt="Mad Monkey" className="h-8 sm:h-10" />
           </div>
           <button className="gradient-mad text-primary-foreground px-4 sm:px-5 py-2 rounded-full font-bold text-xs sm:text-sm uppercase tracking-wider hover:opacity-90 transition-opacity">
             Sign Up Free
@@ -322,10 +320,7 @@ export default function LandingPage() {
       <footer className="bg-mad-dark text-gray-400 py-10 sm:py-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center">
-            <div className="w-12 h-12 bg-mad-light rounded-full flex items-center justify-center mb-4">
-              <span className="text-mad-dark font-display text-2xl leading-none mt-1">M</span>
-            </div>
-            <p className="font-display text-xl text-mad-light mb-2">Mad Monkey</p>
+            <img src={madMonkeyLogo} alt="Mad Monkey" className="h-10 brightness-0 invert mb-4" />
             <p className="text-xs">All rights reserved © Mad Monkey. {new Date().getFullYear()}</p>
           </div>
         </div>
