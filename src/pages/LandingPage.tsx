@@ -126,8 +126,21 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Golden Ticket - Overlapping Hero & VIP */}
+      <div className="relative z-30 flex justify-center -mb-24 sm:-mb-32 lg:-mb-40">
+        <motion.img
+          src={goldenTicket}
+          alt="Golden Ticket - Show the Band, Score the Goods"
+          className="w-48 sm:w-64 md:w-80 lg:w-96 drop-shadow-2xl"
+          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: -5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, type: "spring" }}
+        />
+      </div>
+
       {/* Your Wristband = Instant VIP Status */}
-      <section className="py-16 sm:py-24 bg-mad-dark text-mad-light px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 bg-mad-dark text-mad-light px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-mad-purple/20 blur-[120px]" />
           <div className="absolute bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full bg-mad-pink/20 blur-[100px]" />
