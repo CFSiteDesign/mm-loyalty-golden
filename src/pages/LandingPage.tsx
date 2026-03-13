@@ -18,6 +18,7 @@ import bandMadder from '@/assets/band-madder.svg';
 import bandMaddest from '@/assets/band-maddest.svg';
 import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
 import goldenTicket from '@/assets/golden-ticket.png';
+import goldenTicketHero from '@/assets/golden-ticket-hero.png';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -74,26 +75,14 @@ export default function LandingPage() {
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, type: "spring" }}
-            className="inline-block mb-4 sm:mb-6 px-4 py-1.5 bg-yellow-400 text-mad-dark font-bold uppercase tracking-widest text-xs sm:text-sm rounded-full transform -rotate-2"
-          >
-            The Golden Ticket (On Your Wrist)
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-[clamp(2.2rem,8vw,9rem)] text-primary-foreground mb-4 sm:mb-6 leading-[0.85] tracking-tight whitespace-nowrap"
-          >
-            SHOW YOUR BAND.<br />
-            <span className="text-gradient-hero">
-              SCORE THE GOODS.
-            </span>
-          </motion.h1>
+          <motion.img
+            src={goldenTicketHero}
+            alt="The Golden Ticket (On Your Wrist) - Show The Band. Score The Goods."
+            className="w-72 sm:w-96 md:w-[28rem] lg:w-[36rem] mx-auto mb-4 sm:mb-6 drop-shadow-2xl"
+            initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
+            animate={{ opacity: 1, scale: 1, rotate: -3 }}
+            transition={{ duration: 0.7, type: "spring" }}
+          />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
