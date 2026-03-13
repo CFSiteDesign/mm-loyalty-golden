@@ -77,7 +77,7 @@ export default function VIPSection() {
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08, type: "spring", stiffness: 200 }}
-              className={`group relative px-5 py-3 sm:px-7 sm:py-4 rounded-full border-2 border-${item.color}/40 hover:border-${item.color} bg-${item.color}/10 hover:bg-${item.color}/20 cursor-default transition-all duration-300 hover:scale-105 hover:-rotate-1`}
+              className={`group relative px-5 py-3 sm:px-7 sm:py-4 rounded-full border-2 ${colorMap[item.color].border} ${colorMap[item.color].bg} cursor-default transition-all duration-300 hover:scale-105 hover:-rotate-1`}
             >
               <div className="flex items-center gap-2 sm:gap-3">
                 <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${colorMap[item.color].icon}`} />
