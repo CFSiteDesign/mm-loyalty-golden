@@ -81,14 +81,15 @@ export default function VIPSection() {
                 className={`group relative cursor-default transition-shadow duration-300`}
               >
                 {/* Ticket shape with notches */}
-                <div className="relative bg-mad-light/[0.04] backdrop-blur-sm border border-mad-light/10 overflow-hidden rounded-lg">
-                  {/* Colored top edge */}
-                  <div className={`h-1.5 sm:h-2 w-full ${styles.accent}`} />
-
-                  {/* Left notch */}
-                  <div className="absolute top-1/2 -left-[6px] sm:-left-[8px] -translate-y-1/2 w-3 h-6 sm:w-4 sm:h-8 rounded-r-full bg-mad-dark border-r border-mad-light/10" />
-                  {/* Right notch */}
-                  <div className="absolute top-1/2 -right-[6px] sm:-right-[8px] -translate-y-1/2 w-3 h-6 sm:w-4 sm:h-8 rounded-l-full bg-mad-dark border-l border-mad-light/10" />
+                <div className="relative bg-mad-light/[0.04] backdrop-blur-sm overflow-visible rounded-lg"
+                  style={{
+                    clipPath: `path("M 0 8 Q 0 0 8 0 L ${''} calc(100% - 8px) 0 Q 100% 0 100% 8 L 100% calc(50% - 16px) Q calc(100% - 8px) calc(50% - 8px) calc(100% - 8px) 50% Q calc(100% - 8px) calc(50% + 8px) 100% calc(50% + 16px) L 100% calc(100% - 8px) Q 100% 100% calc(100% - 8px) 100% L 8 100% Q 0 100% 0 calc(100% - 8px) L 0 calc(50% + 16px) Q 8px calc(50% + 8px) 8px 50% Q 8px calc(50% - 8px) 0 calc(50% - 16px) Z")`,
+                  }}
+                >
+                  {/* Use an SVG overlay for the notched border */}
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none">
+                    <rect x="0.5" y="0.5" width="calc(100% - 1px)" height="calc(100% - 1px)" rx="8" fill="none" stroke="hsl(var(--mad-light) / 0.1)" strokeWidth="1" className="hidden" />
+                  </svg>
 
                   <div className="px-5 py-4 sm:px-6 sm:py-6 text-center">
                     {/* Icon */}
