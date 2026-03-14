@@ -35,7 +35,7 @@ export default function CTASection() {
           No points. No apps. Just show the band and get the hookup.
         </motion.p>
 
-        <motion.button
+        <motion.a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
