@@ -14,7 +14,7 @@ export default function HeroSection() {
         <motion.img
           src={goldenTicketHero}
           alt="The Golden Ticket (On Your Wrist) - Show The Band. Score The Goods."
-          className="w-[20rem] sm:w-[32rem] md:w-[40rem] lg:w-[50rem] mx-auto -mb-4 sm:-mb-8 drop-shadow-xl"
+          className="w-[24rem] sm:w-[36rem] md:w-[44rem] lg:w-[54rem] mx-auto -mb-4 sm:-mb-8 drop-shadow-xl"
           initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
           animate={{ opacity: 1, scale: 1, rotate: -3 }}
           transition={{ duration: 0.7, type: "spring" }}
