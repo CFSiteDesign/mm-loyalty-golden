@@ -111,9 +111,8 @@ export default function VIPSection() {
 
                   {/* Bottom dashed tear line */}
                   <div className="border-t border-dashed border-mad-light/10 mx-3 mb-2 sm:mx-4 sm:mb-3" />
-                  <div className="px-3 pb-2 sm:px-4 sm:pb-3 flex items-center justify-between">
-                    <span className={`text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] ${styles.text}/70`}>VIP Access</span>
-                    <span className="text-[8px] sm:text-[10px] text-mad-light/20 font-mono">#{String(i + 1).padStart(2, '0')}</span>
+                  <div className="px-3 pb-2 sm:px-4 sm:pb-3 flex items-center justify-center">
+                    <span className={`text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] ${styles.text}/70`}>🎫 VIP Access</span>
                   </div>
                 </div>
               </motion.div>
