@@ -24,12 +24,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-xl mx-auto"
+          className="max-w-xl mx-auto px-2 sm:px-0"
         >
-          <p className="text-sm sm:text-lg md:text-xl text-foreground/80 leading-relaxed font-medium tracking-wide">
-            Welcome to the Mad Monkey Loyalty Program, your all-access pass to the best of our backyard. We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty
-            <br className="sm:hidden" />
-            <span className="text-muted-foreground italic"> (the fun kind, not the stuffy kind).</span>
+          <p className="text-[13px] sm:text-lg md:text-xl text-foreground/80 leading-[1.7] sm:leading-relaxed font-medium tracking-wide text-center">
+            Welcome to the Mad Monkey Loyalty Program, your all‑access pass to the best of our backyard.
+          </p>
+          <p className="text-[13px] sm:text-lg md:text-xl text-foreground/80 leading-[1.7] sm:leading-relaxed font-medium tracking-wide text-center mt-3 sm:mt-2">
+            We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty <span className="text-muted-foreground italic">(the fun kind, not the stuffy kind).</span>
           </p>
           <div className="mt-5 sm:mt-6 flex items-center justify-center gap-3 sm:gap-4">
             <span className="h-px flex-1 max-w-[3rem] bg-gradient-to-r from-transparent to-mad-pink/60" />
