@@ -27,8 +27,9 @@ export default function HeroSection() {
           className="max-w-xl mx-auto"
         >
           <p className="text-sm sm:text-lg md:text-xl text-foreground/80 leading-relaxed font-medium tracking-wide">
-            Your all-access pass to the best of our backyard. We've teamed up with local legends so that as long as you're wearing that wristband, you're treated like royalty{' '}
-            <span className="text-muted-foreground italic">(the fun kind, not the stuffy kind).</span>
+            Your all-access pass to the best of our backyard. We've teamed up with local legends so that as long as you're wearing that wristband, you're treated like royalty
+            <br className="sm:hidden" />
+            <span className="text-muted-foreground italic"> (the fun kind, not the stuffy kind).</span>
           </p>
           <div className="mt-5 sm:mt-6 flex items-center justify-center gap-3 sm:gap-4">
             <span className="h-px flex-1 max-w-[3rem] bg-gradient-to-r from-transparent to-mad-pink/60" />
