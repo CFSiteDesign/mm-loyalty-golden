@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
-import bandMember from '@/assets/band-member.svg';
-import bandMad from '@/assets/band-mad.svg';
-import bandMadder from '@/assets/band-madder.svg';
-import bandMaddest from '@/assets/band-maddest.svg';
+import bandMember from '@/assets/band-member.png';
+import bandMad from '@/assets/band-mad.png';
+import bandMadder from '@/assets/band-madder.png';
+import bandMaddest from '@/assets/band-maddest.png';
 import PatternOverlay from './PatternOverlay';
 
 const fadeIn = {
