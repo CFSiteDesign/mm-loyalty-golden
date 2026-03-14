@@ -80,37 +80,49 @@ export default function VIPSection() {
                 whileHover={{ scale: 1.05, rotate: "0deg" }}
                 className={`group relative cursor-default transition-shadow duration-300`}
               >
-                {/* Ticket shape with notches */}
-                <div className="relative bg-mad-light/[0.04] backdrop-blur-sm border border-mad-light/10 overflow-hidden rounded-lg">
-                  {/* Colored top edge */}
-                  <div className={`h-1.5 sm:h-2 w-full ${styles.accent}`} />
+                {/* Ticket shape with notched border */}
+                <div className="relative overflow-visible">
+                  {/* SVG ticket shape — both fill and stroke in one responsive shape */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 260" preserveAspectRatio="none" overflow="visible">
+                    <path
+                      d="M 8 0 L 192 0 Q 200 0 200 8 L 200 108 C 192 108 186 118 186 130 C 186 142 192 152 200 152 L 200 252 Q 200 260 192 260 L 8 260 Q 0 260 0 252 L 0 152 C 8 152 14 142 14 130 C 14 118 8 108 0 108 L 0 8 Q 0 0 8 0 Z"
+                      fill="hsl(var(--mad-light) / 0.04)"
+                      stroke="hsl(var(--mad-light) / 0.12)"
+                      strokeWidth="1.5"
+                      vectorEffect="non-scaling-stroke"
+                    />
+                  </svg>
 
-                  {/* Left notch */}
-                  <div className="absolute top-1/2 -left-[6px] sm:-left-[8px] -translate-y-1/2 w-3 h-6 sm:w-4 sm:h-8 rounded-r-full bg-mad-dark border-r border-mad-light/10" />
-                  {/* Right notch */}
-                  <div className="absolute top-1/2 -right-[6px] sm:-right-[8px] -translate-y-1/2 w-3 h-6 sm:w-4 sm:h-8 rounded-l-full bg-mad-dark border-l border-mad-light/10" />
+                  {/* Content clipped to ticket shape */}
+                  <div className="relative"
+                    style={{
+                      clipPath: `polygon(
+                        0% 0%, 100% 0%, 100% 41.5%,
+                        96.5% 43%, 93% 47%, 93% 50%, 93% 53%, 96.5% 57%, 100% 58.5%,
+                        100% 100%, 0% 100%,
+                        0% 58.5%, 3.5% 57%, 7% 53%, 7% 50%, 7% 47%, 3.5% 43%, 0% 41.5%
+                      )`
+                    }}
+                  >
+                    {/* Colored top edge */}
+                    <div className={`h-1.5 sm:h-2 w-full ${styles.accent}`} />
 
-                  <div className="px-5 py-4 sm:px-6 sm:py-6 text-center">
-                    {/* Icon */}
-                    <div className={`w-8 h-8 sm:w-11 sm:h-11 rounded-full ${styles.accent}/15 flex items-center justify-center mx-auto mb-2 sm:mb-3`}>
-                      <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${styles.text}`} />
+                    <div className="px-5 py-4 sm:px-6 sm:py-6 text-center">
+                      <div className={`w-8 h-8 sm:w-11 sm:h-11 rounded-full ${styles.accent}/15 flex items-center justify-center mx-auto mb-2 sm:mb-3`}>
+                        <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${styles.text}`} />
+                      </div>
+                      <h3 className="font-display text-sm sm:text-lg text-mad-light tracking-wide leading-tight uppercase">
+                        {item.label}
+                      </h3>
+                      <p className="text-[9px] sm:text-xs text-mad-light/35 font-medium mt-1 tracking-wider uppercase">
+                        {item.desc}
+                      </p>
                     </div>
-                    
-                    {/* Label */}
-                    <h3 className="font-display text-sm sm:text-lg text-mad-light tracking-wide leading-tight uppercase">
-                      {item.label}
-                    </h3>
-                    
-                    {/* Description */}
-                    <p className="text-[9px] sm:text-xs text-mad-light/35 font-medium mt-1 tracking-wider uppercase">
-                      {item.desc}
-                    </p>
-                  </div>
 
-                  {/* Dashed tear line + footer */}
-                  <div className="border-t border-dashed border-mad-light/10 mx-5 sm:mx-6" />
-                  <div className="py-2 sm:py-3 flex items-center justify-center">
-                    <span className={`text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] ${styles.text}/70`}>🎫 VIP Access</span>
+                    <div className="border-t border-dashed border-mad-light/10 mx-5 sm:mx-6" />
+                    <div className="py-2 sm:py-3 flex items-center justify-center">
+                      <span className={`text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] ${styles.text}/70`}>🎫 VIP Access</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
