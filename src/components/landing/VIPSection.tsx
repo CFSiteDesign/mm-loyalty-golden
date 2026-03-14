@@ -80,38 +80,42 @@ export default function VIPSection() {
                 whileHover={{ scale: 1.05, rotate: "0deg" }}
                 className={`group relative cursor-default transition-shadow duration-300`}
               >
-                {/* Ticket shape with notches */}
-                <div className="relative bg-mad-light/[0.04] backdrop-blur-sm overflow-visible rounded-lg"
-                  style={{
-                    clipPath: `path("M 0 8 Q 0 0 8 0 L ${''} calc(100% - 8px) 0 Q 100% 0 100% 8 L 100% calc(50% - 16px) Q calc(100% - 8px) calc(50% - 8px) calc(100% - 8px) 50% Q calc(100% - 8px) calc(50% + 8px) 100% calc(50% + 16px) L 100% calc(100% - 8px) Q 100% 100% calc(100% - 8px) 100% L 8 100% Q 0 100% 0 calc(100% - 8px) L 0 calc(50% + 16px) Q 8px calc(50% + 8px) 8px 50% Q 8px calc(50% - 8px) 0 calc(50% - 16px) Z")`,
-                  }}
-                >
-                  {/* Use an SVG overlay for the notched border */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none">
-                    <rect x="0.5" y="0.5" width="calc(100% - 1px)" height="calc(100% - 1px)" rx="8" fill="none" stroke="hsl(var(--mad-light) / 0.1)" strokeWidth="1" className="hidden" />
+                {/* Ticket shape with notched border */}
+                <div className="relative overflow-visible">
+                  {/* SVG ticket outline */}
+                  <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" overflow="visible">
+                    <defs>
+                      <clipPath id={`ticket-clip-${i}`} clipPathUnits="objectBoundingBox">
+                        <path d="M 0.04 0 L 0.96 0 Q 1 0 1 0.04 L 1 0.4 Q 0.95 0.4 0.95 0.5 Q 0.95 0.6 1 0.6 L 1 0.96 Q 1 1 0.96 1 L 0.04 1 Q 0 1 0 0.96 L 0 0.6 Q 0.05 0.6 0.05 0.5 Q 0.05 0.4 0 0.4 L 0 0.04 Q 0 0 0.04 0 Z" />
+                      </clipPath>
+                    </defs>
+                    <path d="M 4%,0 L 96%,0 Q 100%,0 100%,4% L 100%,40% Q 95%,40% 95%,50% Q 95%,60% 100%,60% L 100%,96% Q 100%,100% 96%,100% L 4%,100% Q 0,100% 0,96% L 0,60% Q 5%,60% 5%,50% Q 5%,40% 0,40% L 0,4% Q 0,0 4%,0 Z"
+                      fill="none" stroke="hsl(var(--mad-light) / 0.12)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
                   </svg>
 
-                  <div className="px-5 py-4 sm:px-6 sm:py-6 text-center">
-                    {/* Icon */}
-                    <div className={`w-8 h-8 sm:w-11 sm:h-11 rounded-full ${styles.accent}/15 flex items-center justify-center mx-auto mb-2 sm:mb-3`}>
-                      <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${styles.text}`} />
-                    </div>
-                    
-                    {/* Label */}
-                    <h3 className="font-display text-sm sm:text-lg text-mad-light tracking-wide leading-tight uppercase">
-                      {item.label}
-                    </h3>
-                    
-                    {/* Description */}
-                    <p className="text-[9px] sm:text-xs text-mad-light/35 font-medium mt-1 tracking-wider uppercase">
-                      {item.desc}
-                    </p>
-                  </div>
+                  {/* Card fill with clip */}
+                  <div className="bg-mad-light/[0.04] backdrop-blur-sm"
+                    style={{ clipPath: `url(#ticket-clip-${i})` }}
+                  >
+                    {/* Colored top edge */}
+                    <div className={`h-1.5 sm:h-2 w-full ${styles.accent}`} />
 
-                  {/* Dashed tear line + footer */}
-                  <div className="border-t border-dashed border-mad-light/10 mx-5 sm:mx-6" />
-                  <div className="py-2 sm:py-3 flex items-center justify-center">
-                    <span className={`text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] ${styles.text}/70`}>🎫 VIP Access</span>
+                    <div className="px-5 py-4 sm:px-6 sm:py-6 text-center">
+                      <div className={`w-8 h-8 sm:w-11 sm:h-11 rounded-full ${styles.accent}/15 flex items-center justify-center mx-auto mb-2 sm:mb-3`}>
+                        <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${styles.text}`} />
+                      </div>
+                      <h3 className="font-display text-sm sm:text-lg text-mad-light tracking-wide leading-tight uppercase">
+                        {item.label}
+                      </h3>
+                      <p className="text-[9px] sm:text-xs text-mad-light/35 font-medium mt-1 tracking-wider uppercase">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    <div className="border-t border-dashed border-mad-light/10 mx-5 sm:mx-6" />
+                    <div className="py-2 sm:py-3 flex items-center justify-center">
+                      <span className={`text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] ${styles.text}/70`}>🎫 VIP Access</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
