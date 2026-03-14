@@ -78,24 +78,22 @@ export default function VIPSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07, type: "spring", stiffness: 150 }}
                 whileHover={{ scale: 1.05, rotate: "0deg" }}
-                className={`group relative cursor-default transition-shadow duration-300 hover:${styles.glow}`}
+                className={`group relative cursor-default transition-shadow duration-300`}
               >
-                {/* Wristband stub shape */}
-                <div className="relative bg-mad-light/[0.04] backdrop-blur-sm border border-mad-light/10 overflow-hidden rounded-sm">
-                  {/* Colored top edge — like a wristband stripe */}
-                  <div className={`h-1 sm:h-1.5 w-full ${styles.accent}`} />
-                  
-                  {/* Perforated edge dots */}
-                  <div className="absolute top-1 sm:top-1.5 right-0 flex flex-col gap-[3px] pr-1.5 pt-1.5">
-                    {[...Array(4)].map((_, d) => (
-                      <div key={d} className="w-1 h-1 rounded-full bg-mad-light/10" />
-                    ))}
-                  </div>
+                {/* Ticket shape with notches */}
+                <div className="relative bg-mad-light/[0.04] backdrop-blur-sm border border-mad-light/10 overflow-hidden rounded-lg">
+                  {/* Colored top edge */}
+                  <div className={`h-1.5 sm:h-2 w-full ${styles.accent}`} />
 
-                  <div className="p-3 sm:p-5">
+                  {/* Left notch */}
+                  <div className="absolute top-1/2 -left-[6px] sm:-left-[8px] -translate-y-1/2 w-3 h-6 sm:w-4 sm:h-8 rounded-r-full bg-mad-dark border-r border-mad-light/10" />
+                  {/* Right notch */}
+                  <div className="absolute top-1/2 -right-[6px] sm:-right-[8px] -translate-y-1/2 w-3 h-6 sm:w-4 sm:h-8 rounded-l-full bg-mad-dark border-l border-mad-light/10" />
+
+                  <div className="px-5 py-4 sm:px-6 sm:py-6 text-center">
                     {/* Icon */}
-                    <div className={`w-7 h-7 sm:w-10 sm:h-10 rounded-sm ${styles.accent}/15 flex items-center justify-center mb-2 sm:mb-3`}>
-                      <item.icon className={`w-3.5 h-3.5 sm:w-5 sm:h-5 ${styles.text}`} />
+                    <div className={`w-8 h-8 sm:w-11 sm:h-11 rounded-full ${styles.accent}/15 flex items-center justify-center mx-auto mb-2 sm:mb-3`}>
+                      <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${styles.text}`} />
                     </div>
                     
                     {/* Label */}
@@ -109,9 +107,9 @@ export default function VIPSection() {
                     </p>
                   </div>
 
-                  {/* Bottom dashed tear line */}
-                  <div className="border-t border-dashed border-mad-light/10 mx-3 mb-2 sm:mx-4 sm:mb-3" />
-                  <div className="px-3 pb-2 sm:px-4 sm:pb-3 flex items-center justify-center">
+                  {/* Dashed tear line + footer */}
+                  <div className="border-t border-dashed border-mad-light/10 mx-5 sm:mx-6" />
+                  <div className="py-2 sm:py-3 flex items-center justify-center">
                     <span className={`text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] ${styles.text}/70`}>🎫 VIP Access</span>
                   </div>
                 </div>
