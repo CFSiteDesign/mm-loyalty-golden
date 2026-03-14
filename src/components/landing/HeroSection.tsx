@@ -27,7 +27,7 @@ export default function HeroSection() {
           className="max-w-xl mx-auto"
         >
           <p className="text-sm sm:text-lg md:text-xl text-foreground/80 leading-relaxed font-medium tracking-wide">
-            Your all-access pass to the best of our backyard. We've teamed up with local legends so that as long as you're wearing that wristband, you're treated like royalty
+            Welcome to the Mad Monkey Loyalty Program, your all-access pass to the best of our backyard. We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty
             <br className="sm:hidden" />
             <span className="text-muted-foreground italic"> (the fun kind, not the stuffy kind).</span>
           </p>
