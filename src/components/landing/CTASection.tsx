@@ -35,15 +35,18 @@ export default function CTASection() {
           No points. No apps. Just show the band and get the hookup.
         </motion.p>
 
-        <motion.button
+        <motion.a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="gradient-mad text-primary-foreground px-6 sm:px-10 py-3.5 sm:py-5 rounded-full font-bold text-sm sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(232,0,214,0.3)]"
+          className="gradient-mad text-primary-foreground px-6 sm:px-10 py-3.5 sm:py-5 rounded-full font-bold text-sm sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(232,0,214,0.3)] inline-block no-underline"
+          href="https://madmonkeyhostels.com/madloyalty"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Sign Up For Free
-        </motion.button>
+        </motion.a>
       </div>
     </section>
   );
