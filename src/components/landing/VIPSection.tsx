@@ -85,7 +85,7 @@ export default function VIPSection() {
           viewport={{ once: true }}
           className="text-xs sm:text-base text-mad-light/50 font-medium text-center mb-6 sm:mb-12 max-w-lg mx-auto"
         >
-          Whether you need to recover from last night or gear up for tonight — your wristband unlocks curated deals at:
+          Whether you need to recover from last night or gear up for tonight - your wristband unlocks curated deals at:
         </motion.p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5">
