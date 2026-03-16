@@ -78,8 +78,8 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a href="https://madmonkeyhostels.com/login" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-foreground">Login</a>
           <div className="pt-2 border-t border-border flex flex-col gap-2">
-            <a href="https://madmonkeyhostels.com/login" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-foreground/70">Login</a>
             <a href="https://madmonkeyhostels.com/book" target="_blank" rel="noopener noreferrer" className="bg-foreground text-background px-5 py-2.5 rounded-full text-sm font-bold text-center">Book Now</a>
           </div>
         </div>
