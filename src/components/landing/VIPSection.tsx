@@ -101,7 +101,7 @@ export default function VIPSection() {
                 whileHover={{ scale: 1.05, rotate: "0deg" }}
                 className="group relative cursor-default transition-shadow duration-300 h-full"
               >
-                <div className="relative overflow-visible">
+                <div className="relative overflow-visible h-full">
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 260" preserveAspectRatio="none" overflow="visible">
                     <path
                       d="M 8 0 L 192 0 Q 200 0 200 8 L 200 108 C 192 108 186 118 186 130 C 186 142 192 152 200 152 L 200 252 Q 200 260 192 260 L 8 260 Q 0 260 0 252 L 0 152 C 8 152 14 142 14 130 C 14 118 8 108 0 108 L 0 8 Q 0 0 8 0 Z"
