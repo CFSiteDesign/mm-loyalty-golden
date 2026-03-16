@@ -88,7 +88,7 @@ export default function VIPSection() {
           Whether you need to recover from last night or gear up for tonight - your wristband unlocks curated deals at:
         </motion.p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5 auto-rows-fr">
           {categories.map((item, i) => {
             const styles = colorStyles[item.color];
             return (
