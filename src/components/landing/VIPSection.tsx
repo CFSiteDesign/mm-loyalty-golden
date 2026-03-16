@@ -37,7 +37,7 @@ export default function VIPSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-8xl mb-2 sm:mb-4 leading-[1.1]"
+            className="text-[2rem] sm:text-[2.5rem] md:text-5xl lg:text-8xl mb-2 sm:mb-4 leading-[1.1]"
           >
             <span className="block sm:inline sm:whitespace-nowrap">Your Wristband =</span>{' '}
             <span className="block sm:inline text-transparent bg-clip-text gradient-mad bg-gradient-to-r from-mad-gradient-start to-mad-gradient-end">Instant VIP Status</span>
@@ -53,7 +53,7 @@ export default function VIPSection() {
           className="max-w-2xl mx-auto text-center mb-4 sm:mb-8"
         >
           <p className="text-sm sm:text-lg text-mad-light/70 leading-relaxed font-medium">
-            Welcome to the Mad Monkey Loyalty Program, your all‑access pass to the best of our backyard.
+            Welcome to the Mad Monkey Loyalty Program, your all-access pass to the best of our backyard.
             We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty <span className="text-mad-light/40 italic">(the fun kind, not the stuffy kind).</span>
           </p>
           <div className="mt-4 sm:mt-5 flex items-center justify-center gap-3 sm:gap-4">
@@ -85,10 +85,10 @@ export default function VIPSection() {
           viewport={{ once: true }}
           className="text-xs sm:text-base text-mad-light/50 font-medium text-center mb-6 sm:mb-12 max-w-lg mx-auto"
         >
-          Whether you need to recover from last night or gear up for tonight — your wristband unlocks curated deals at:
+          Whether you need to recover from last night or gear up for tonight - your wristband unlocks curated deals at:
         </motion.p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5 auto-rows-fr">
           {categories.map((item, i) => {
             const styles = colorStyles[item.color];
             return (
@@ -99,9 +99,9 @@ export default function VIPSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07, type: "spring", stiffness: 150 }}
                 whileHover={{ scale: 1.05, rotate: "0deg" }}
-                className={`group relative cursor-default transition-shadow duration-300`}
+                className="group relative cursor-default transition-shadow duration-300 h-full"
               >
-                <div className="relative overflow-visible">
+                <div className="relative overflow-visible h-full">
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 260" preserveAspectRatio="none" overflow="visible">
                     <path
                       d="M 8 0 L 192 0 Q 200 0 200 8 L 200 108 C 192 108 186 118 186 130 C 186 142 192 152 200 152 L 200 252 Q 200 260 192 260 L 8 260 Q 0 260 0 252 L 0 152 C 8 152 14 142 14 130 C 14 118 8 108 0 108 L 0 8 Q 0 0 8 0 Z"
