@@ -20,7 +20,8 @@ const colorStyles = {
   "mad-green": { accent: "bg-mad-green", text: "text-mad-green", glow: "shadow-[0_0_20px_hsl(var(--mad-green)/0.4)]" },
 } as const;
 
-const tickerText = "SHOW THE BAND · SCORE THE GOODS · ";
+const tickerText = "SHOW THE BAND · SCORE THE GOODS ·";
+const marqueeContent = Array.from({ length: 10 }, () => tickerText).join(" ");
 
 export default function VIPSection() {
   return (
