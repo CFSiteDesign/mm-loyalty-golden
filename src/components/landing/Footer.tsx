@@ -54,10 +54,10 @@ const footerColumns = [
 ];
 
 const socialLinks = [
-  { label: 'Instagram', href: 'https://www.instagram.com/madmonkeyhostels/', icon: 'https://madmonkeyhostels.com/images/instagram.svg' },
-  { label: 'TikTok', href: 'https://www.tiktok.com/@madmonkeyhostels', icon: 'https://madmonkeyhostels.com/images/tiktok.svg' },
-  { label: 'Facebook', href: 'https://www.facebook.com/MadMonkeyHostels', icon: 'https://madmonkeyhostels.com/images/facebook.svg' },
-  { label: 'YouTube', href: 'https://www.youtube.com/channel/UCkUGlFdhp5Ndk68j_QRS1kw', icon: 'https://madmonkeyhostels.com/images/youtube.svg' },
+  { label: 'Instagram', href: 'https://www.instagram.com/madmonkeyhostels/', Icon: Instagram },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@madmonkeyhostels', Icon: TikTokIcon },
+  { label: 'Facebook', href: 'https://www.facebook.com/MadMonkeyHostels', Icon: Facebook },
+  { label: 'YouTube', href: 'https://www.youtube.com/channel/UCkUGlFdhp5Ndk68j_QRS1kw', Icon: Youtube },
 ];
 
 export default function Footer() {
