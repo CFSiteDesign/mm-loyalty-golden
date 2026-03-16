@@ -99,7 +99,7 @@ export default function VIPSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07, type: "spring", stiffness: 150 }}
                 whileHover={{ scale: 1.05, rotate: "0deg" }}
-                className={`group relative cursor-default transition-shadow duration-300`}
+                className="group relative cursor-default transition-shadow duration-300 h-full"
               >
                 <div className="relative overflow-visible">
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 260" preserveAspectRatio="none" overflow="visible">
