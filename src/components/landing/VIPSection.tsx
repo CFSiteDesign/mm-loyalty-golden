@@ -53,7 +53,7 @@ export default function VIPSection() {
           className="max-w-2xl mx-auto text-center mb-4 sm:mb-8"
         >
           <p className="text-sm sm:text-lg text-mad-light/70 leading-relaxed font-medium">
-            Welcome to the Mad Monkey Loyalty Program, your all‑access pass to the best of our backyard.
+            Welcome to the Mad Monkey Loyalty Program, your all-access pass to the best of our backyard.
             We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty <span className="text-mad-light/40 italic">(the fun kind, not the stuffy kind).</span>
           </p>
           <div className="mt-4 sm:mt-5 flex items-center justify-center gap-3 sm:gap-4">
