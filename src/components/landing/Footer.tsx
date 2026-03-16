@@ -72,8 +72,8 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-4">
             {socialLinks.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
-                <img src={s.icon} alt={s.label} className="w-5 h-5 brightness-0 invert" />
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity text-mad-light">
+                <s.Icon size={20} />
               </a>
             ))}
           </div>
