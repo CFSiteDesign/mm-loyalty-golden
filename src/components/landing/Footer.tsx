@@ -1,4 +1,12 @@
+import { Instagram, Facebook, Youtube } from 'lucide-react';
+import type { LucideProps } from 'lucide-react';
 import madMonkeyLogo from '@/assets/madmonkey-logo.svg';
+
+const TikTokIcon = (props: LucideProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={props.className}>
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
 
 const footerColumns = [
   {
@@ -46,10 +54,10 @@ const footerColumns = [
 ];
 
 const socialLinks = [
-  { label: 'Instagram', href: 'https://www.instagram.com/madmonkeyhostels/', icon: 'https://madmonkeyhostels.com/images/instagram.svg' },
-  { label: 'TikTok', href: 'https://www.tiktok.com/@madmonkeyhostels', icon: 'https://madmonkeyhostels.com/images/tiktok.svg' },
-  { label: 'Facebook', href: 'https://www.facebook.com/MadMonkeyHostels', icon: 'https://madmonkeyhostels.com/images/facebook.svg' },
-  { label: 'YouTube', href: 'https://www.youtube.com/channel/UCkUGlFdhp5Ndk68j_QRS1kw', icon: 'https://madmonkeyhostels.com/images/youtube.svg' },
+  { label: 'Instagram', href: 'https://www.instagram.com/madmonkeyhostels/', Icon: Instagram },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@madmonkeyhostels', Icon: TikTokIcon },
+  { label: 'Facebook', href: 'https://www.facebook.com/MadMonkeyHostels', Icon: Facebook },
+  { label: 'YouTube', href: 'https://www.youtube.com/channel/UCkUGlFdhp5Ndk68j_QRS1kw', Icon: Youtube },
 ];
 
 export default function Footer() {
@@ -64,8 +72,8 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-4">
             {socialLinks.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
-                <img src={s.icon} alt={s.label} className="w-5 h-5 brightness-0 invert" />
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity text-mad-light">
+                <s.Icon size={20} />
               </a>
             ))}
           </div>
