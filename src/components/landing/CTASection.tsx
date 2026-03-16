@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import ctaBackground from '@/assets/cta-background.jpg';
+import ctaBackground from '@/assets/cta-background.png';
 import PatternOverlay from './PatternOverlay';
 
 export default function CTASection() {
