@@ -31,7 +31,7 @@ export default function VIPSection() {
 
       {/* Heading */}
       <div className="relative z-10 pt-12 sm:pt-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center mb-4 sm:mb-10">
+        <div className="max-w-7xl mx-auto text-center mb-4 sm:mb-6">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,13 +43,34 @@ export default function VIPSection() {
             <span className="text-transparent bg-clip-text gradient-mad bg-gradient-to-r from-mad-gradient-start to-mad-gradient-end">Instant VIP Status</span>
           </motion.h2>
         </div>
+
+        {/* Body text from hero — moved here */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-2xl mx-auto text-center mb-4 sm:mb-8"
+        >
+          <p className="text-sm sm:text-lg text-mad-light/70 leading-relaxed font-medium">
+            Welcome to the Mad Monkey Loyalty Program, your all‑access pass to the best of our backyard.
+            We've teamed up with our favorite local legends to make sure that as long as you're wearing that wristband, you're treated like royalty <span className="text-mad-light/40 italic">(the fun kind, not the stuffy kind).</span>
+          </p>
+          <div className="mt-4 sm:mt-5 flex items-center justify-center gap-3 sm:gap-4">
+            <span className="h-px flex-1 max-w-[3rem] bg-gradient-to-r from-transparent to-mad-pink/60" />
+            <p className="text-[10px] sm:text-sm font-bold uppercase tracking-[0.25em] text-mad-purple whitespace-nowrap">
+              No points · No apps · Just show the band
+            </p>
+            <span className="h-px flex-1 max-w-[3rem] bg-gradient-to-l from-transparent to-mad-pink/60" />
+          </div>
+        </motion.div>
       </div>
 
       {/* Marquee ticker */}
       <div className="relative z-10 border-y border-mad-light/10 py-2 sm:py-4 mb-8 sm:mb-16 overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...Array(4)].map((_, i) => (
-            <span key={i} className="text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-mad-light/40 mx-0">
+        <div className="flex animate-marquee whitespace-nowrap w-max">
+          {[...Array(8)].map((_, i) => (
+            <span key={i} className="text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-mad-light/40 px-2">
               {tickerText}
             </span>
           ))}
@@ -80,9 +101,7 @@ export default function VIPSection() {
                 whileHover={{ scale: 1.05, rotate: "0deg" }}
                 className={`group relative cursor-default transition-shadow duration-300`}
               >
-                {/* Ticket shape with notched border */}
                 <div className="relative overflow-visible">
-                  {/* SVG ticket shape — both fill and stroke in one responsive shape */}
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 260" preserveAspectRatio="none" overflow="visible">
                     <path
                       d="M 8 0 L 192 0 Q 200 0 200 8 L 200 108 C 192 108 186 118 186 130 C 186 142 192 152 200 152 L 200 252 Q 200 260 192 260 L 8 260 Q 0 260 0 252 L 0 152 C 8 152 14 142 14 130 C 14 118 8 108 0 108 L 0 8 Q 0 0 8 0 Z"
@@ -93,7 +112,6 @@ export default function VIPSection() {
                     />
                   </svg>
 
-                  {/* Content clipped to ticket shape */}
                   <div className="relative"
                     style={{
                       clipPath: `polygon(
@@ -104,9 +122,7 @@ export default function VIPSection() {
                       )`
                     }}
                   >
-                    {/* Colored top edge */}
                     <div className={`h-1.5 sm:h-2 w-full ${styles.accent}`} />
-
                     <div className="px-5 py-4 sm:px-6 sm:py-6 text-center">
                       <div className={`w-8 h-8 sm:w-11 sm:h-11 rounded-full ${styles.accent}/15 flex items-center justify-center mx-auto mb-2 sm:mb-3`}>
                         <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${styles.text}`} />
@@ -118,7 +134,6 @@ export default function VIPSection() {
                         {item.desc}
                       </p>
                     </div>
-
                     <div className="border-t border-dashed border-mad-light/10 mx-5 sm:mx-6" />
                     <div className="py-2 sm:py-3 flex items-center justify-center">
                       <span className={`text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] ${styles.text}/70`}>🎫 VIP Access</span>

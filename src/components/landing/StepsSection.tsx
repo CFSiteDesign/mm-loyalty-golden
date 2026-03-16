@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { Search, Hand, Trophy } from 'lucide-react';
-import heroBackground from '@/assets/hero-background.jpg';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -18,17 +17,6 @@ const steps = [
 export default function StepsSection() {
   return (
     <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-card overflow-hidden relative">
-      {/* Side image on larger screens */}
-      <div className="hidden lg:block absolute right-0 top-0 h-full w-[45%] pointer-events-none overflow-hidden">
-        <img
-          src={heroBackground}
-          alt=""
-          className="h-full w-full object-cover object-center opacity-30"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-card via-card/60 to-transparent" />
-      </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div {...fadeIn} className="text-center mb-8 sm:mb-14">
           <h2 className="text-2xl sm:text-5xl md:text-7xl text-foreground mb-2">How to Live the Dream</h2>

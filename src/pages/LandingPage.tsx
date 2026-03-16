@@ -1,5 +1,4 @@
 import Navbar from '@/components/landing/Navbar';
-import HeroSection from '@/components/landing/HeroSection';
 import VIPSection from '@/components/landing/VIPSection';
 import StepsSection from '@/components/landing/StepsSection';
 import TiersSection from '@/components/landing/TiersSection';
@@ -10,7 +9,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       <Navbar />
-      <HeroSection />
+      <div className="pt-14 sm:pt-16" /> {/* spacer for fixed nav */}
       <VIPSection />
       <StepsSection />
       <TiersSection />
