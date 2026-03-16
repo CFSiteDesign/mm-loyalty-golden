@@ -37,9 +37,9 @@ export default function VIPSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl sm:text-6xl md:text-8xl mb-2 sm:mb-4 leading-[0.9]"
+            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl mb-2 sm:mb-4 leading-[0.95]"
           >
-            Your Wristband =<br />
+            <span className="whitespace-nowrap">Your Wristband =</span>{' '}
             <span className="text-transparent bg-clip-text gradient-mad bg-gradient-to-r from-mad-gradient-start to-mad-gradient-end">Instant VIP Status</span>
           </motion.h2>
         </div>
