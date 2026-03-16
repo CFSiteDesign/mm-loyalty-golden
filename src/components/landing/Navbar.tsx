@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import madMonkeyLogo from '@/assets/madmonkey-logo.svg';
 
 const navLinks = [
-  { label: 'Ha Giang Loop', href: 'https://madmonkeyhostels.com/ha-giang-loop/', highlight: true },
+  
   { label: 'Our Story', href: 'https://madmonkeyhostels.com/our-story' },
   { label: 'Sleep', href: 'https://madmonkeyhostels.com/sleep' },
   { label: 'Experience', href: 'https://madmonkeyhostels.com/experience' },
