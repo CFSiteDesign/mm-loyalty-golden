@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import madMonkeyLogo from '@/assets/madmonkey-logo.svg';
 
 const navLinks = [
-  { label: 'Ha Giang Loop', href: 'https://madmonkeyhostels.com/ha-giang-loop/', highlight: true },
+  
   { label: 'Our Story', href: 'https://madmonkeyhostels.com/our-story' },
   { label: 'Sleep', href: 'https://madmonkeyhostels.com/sleep' },
   { label: 'Experience', href: 'https://madmonkeyhostels.com/experience' },
@@ -28,11 +28,7 @@ export default function Navbar() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
-                link.highlight
-                  ? 'border border-foreground/20 text-foreground hover:bg-foreground/5'
-                  : 'text-foreground/70 hover:text-foreground'
-              }`}
+              className="px-3 py-2 rounded-full text-sm font-semibold transition-colors text-foreground/70 hover:text-foreground"
             >
               {link.label}
             </a>
