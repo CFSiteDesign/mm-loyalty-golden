@@ -69,8 +69,8 @@ export default function VIPSection() {
       {/* Marquee ticker */}
       <div className="relative z-10 border-y border-mad-light/10 py-2 sm:py-4 mb-8 sm:mb-16 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap w-max">
-          {[...Array(8)].map((_, i) => (
-            <span key={i} className="text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-mad-light/40 px-2">
+          {[...Array(16)].map((_, i) => (
+            <span key={i} className="text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-mad-light/40 px-4">
               {tickerText}
             </span>
           ))}
