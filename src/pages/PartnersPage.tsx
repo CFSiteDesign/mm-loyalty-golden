@@ -69,9 +69,6 @@ function AreaAccordion({ area, isOpen, onToggle }: { area: Area; isOpen: boolean
         className="w-full flex items-center justify-between px-5 sm:px-7 py-4 sm:py-5 text-left group"
       >
         <div className="flex items-center gap-3 sm:gap-4">
-          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl gradient-mad flex items-center justify-center shrink-0">
-            <span className="font-display text-[10px] sm:text-xs text-primary-foreground font-bold tracking-wider">{area.code}</span>
-          </div>
           <div>
             <h3 className="text-base sm:text-lg font-bold text-mad-light" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               {area.name}
