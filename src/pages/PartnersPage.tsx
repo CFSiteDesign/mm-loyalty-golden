@@ -116,6 +116,10 @@ function AreaAccordion({ area, isOpen, onToggle }: { area: Area; isOpen: boolean
 export default function PartnersPage() {
   const [openArea, setOpenArea] = useState<string | null>(areas[0]?.code ?? null);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const totalPartners = areas.reduce((sum, a) => sum + a.partners.length, 0);
 
   return (
