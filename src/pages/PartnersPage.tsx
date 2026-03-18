@@ -49,9 +49,9 @@ function PartnerCard({ partner }: { partner: Partner }) {
 
       {partner.offer && (
         <div className="mt-3 pt-3 border-t border-mad-light/[0.06]">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-mad-green/15 text-mad-green text-[11px] sm:text-xs font-bold uppercase tracking-wide">
+          <div className="px-3 py-2 rounded-lg bg-mad-green/15 text-mad-green text-[11px] sm:text-xs font-bold tracking-wide leading-relaxed break-words">
             🎫 {partner.offer}
-          </span>
+          </div>
         </div>
       )}
     </motion.div>
