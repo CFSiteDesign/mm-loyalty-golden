@@ -36,18 +36,34 @@ export default function CTASection() {
           No points. No apps. Just show the band and get the hookup.
         </motion.p>
 
-        <motion.a
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="gradient-mad text-primary-foreground px-6 sm:px-10 py-3.5 sm:py-5 rounded-full font-bold text-sm sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(232,0,214,0.3)] inline-block no-underline"
-          href="https://madmonkeyhostels.com/madloyalty"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sign Up For Free
-        </motion.a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <motion.a
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="gradient-mad text-primary-foreground px-6 sm:px-10 py-3.5 sm:py-5 rounded-full font-bold text-sm sm:text-lg uppercase tracking-wider hover:opacity-90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(232,0,214,0.3)] inline-block no-underline"
+            href="https://madmonkeyhostels.com/madloyalty"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sign Up For Free
+          </motion.a>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            <Link
+              to="/partners"
+              className="inline-block border-2 border-mad-light/30 text-mad-light px-6 sm:px-10 py-3.5 sm:py-5 rounded-full font-bold text-sm sm:text-lg uppercase tracking-wider hover:border-mad-light/60 hover:bg-mad-light/10 transition-all hover:scale-105 active:scale-95 no-underline"
+            >
+              See Our Partners
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
