@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import ctaBackground from '@/assets/cta-background.png';
 import PatternOverlay from './PatternOverlay';
 
