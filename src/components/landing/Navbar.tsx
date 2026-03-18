@@ -81,8 +81,8 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={(e) => handleLinkClick(link, e)}
+              {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               className="block px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-foreground"
             >
               {link.label}
