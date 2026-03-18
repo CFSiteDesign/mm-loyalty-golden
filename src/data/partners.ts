@@ -22,17 +22,22 @@ export const areas: Area[] = [
     ],
   },
   {
+    code: 'SGO',
+    name: 'Siargao',
+    partners: [
+      { name: 'Bar Ciao', location: 'General Luna', link: 'https://www.instagram.com/barciao_iao/', linkType: 'instagram', offer: '5% on F&B' },
+      { name: 'Gwapitos', location: 'General Luna', link: 'https://www.instagram.com/gwapitos.official/', linkType: 'instagram', offer: '10% on merch' },
+      { name: 'Good Times Coffee', location: 'General Luna', link: 'https://www.instagram.com/goodtimescoffeeph/', linkType: 'instagram', offer: '10% on F&B' },
+      { name: 'Shaka', location: 'General Luna', link: 'https://www.instagram.com/shaka.hq/', linkType: 'instagram', offer: '5-10% on F&B' },
+      { name: 'Leche Ice Cream', location: 'General Luna', link: 'https://www.instagram.com/lecheicecream/', linkType: 'instagram', offer: '5-10% on F&B' },
+      { name: 'Barbosa', location: 'General Luna', link: 'https://www.instagram.com/barbosa_siargao/', linkType: 'instagram', offer: '5-10% on F&B' },
+    ],
+  },
+  {
     code: 'SQR',
     name: 'Siquijor',
     partners: [
       { name: 'Aninag Festival', location: 'Siquijor', link: 'https://www.instagram.com/aninagfestival/', linkType: 'instagram', offer: '20% off on tickets (code MADMONKEY20) or walk in/show wristag to cut the queue' },
-    ],
-  },
-  {
-    code: 'NCP',
-    name: 'Nacpan',
-    partners: [
-      { name: 'Gym', location: 'Mabuhay', offer: '10% of F&B' },
     ],
   },
 ];
