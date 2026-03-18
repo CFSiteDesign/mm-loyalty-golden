@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, ExternalLink, ChevronDown, ArrowLeft, Instagram } from 'lucide-react';
 import { areas, type Area, type Partner } from '@/data/partners';
