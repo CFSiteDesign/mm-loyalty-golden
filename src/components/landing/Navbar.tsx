@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import madMonkeyLogo from '@/assets/madmonkey-logo.svg';
 
