@@ -13,6 +13,15 @@ const navLinks = [
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLinkClick = (link: typeof navLinks[0], e: React.MouseEvent) => {
+    if (!link.external) {
+      e.preventDefault();
+      setMobileOpen(false);
+      navigate(link.href);
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
@@ -27,8 +36,8 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={(e) => handleLinkClick(link, e)}
+              {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               className="px-3 py-2 rounded-full text-sm font-semibold transition-colors text-foreground/70 hover:text-foreground"
             >
               {link.label}
