@@ -28,9 +28,6 @@ export const areas: Area[] = [
       { name: 'Bar Ciao', location: 'General Luna', link: 'https://www.instagram.com/barciao_iao/', linkType: 'instagram', offer: '5% on F&B' },
       { name: 'Gwapitos', location: 'General Luna', link: 'https://www.instagram.com/gwapitos.official/', linkType: 'instagram', offer: '10% on merch' },
       { name: 'Good Times Coffee', location: 'General Luna', link: 'https://www.instagram.com/goodtimescoffeeph/', linkType: 'instagram', offer: '10% on F&B' },
-      { name: 'Shaka', location: 'General Luna', link: 'https://www.instagram.com/shaka.hq/', linkType: 'instagram', offer: '5-10% on F&B' },
-      { name: 'Leche Ice Cream', location: 'General Luna', link: 'https://www.instagram.com/lecheicecream/', linkType: 'instagram', offer: '5-10% on F&B' },
-      { name: 'Barbosa', location: 'General Luna', link: 'https://www.instagram.com/barbosa_siargao/', linkType: 'instagram', offer: '5-10% on F&B' },
     ],
   },
   {
