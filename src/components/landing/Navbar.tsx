@@ -1,17 +1,27 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import madMonkeyLogo from '@/assets/madmonkey-logo.svg';
 
 const navLinks = [
-  
-  { label: 'Our Story', href: 'https://madmonkeyhostels.com/our-story' },
-  { label: 'Sleep', href: 'https://madmonkeyhostels.com/sleep' },
-  { label: 'Experience', href: 'https://madmonkeyhostels.com/experience' },
-  { label: 'Mad Loyalty', href: 'https://madmonkeyhostels.com/madloyalty' },
+  { label: 'Our Story', href: 'https://madmonkeyhostels.com/our-story', external: true },
+  { label: 'Sleep', href: 'https://madmonkeyhostels.com/sleep', external: true },
+  { label: 'Experience', href: 'https://madmonkeyhostels.com/experience', external: true },
+  { label: 'Mad Loyalty', href: 'https://madmonkeyhostels.com/madloyalty', external: true },
+  { label: 'Partners', href: '/partners', external: false },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLinkClick = (link: typeof navLinks[0], e: React.MouseEvent) => {
+    if (!link.external) {
+      e.preventDefault();
+      setMobileOpen(false);
+      navigate(link.href);
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
@@ -26,8 +36,8 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={(e) => handleLinkClick(link, e)}
+              {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               className="px-3 py-2 rounded-full text-sm font-semibold transition-colors text-foreground/70 hover:text-foreground"
             >
               {link.label}
@@ -71,8 +81,8 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={(e) => handleLinkClick(link, e)}
+              {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               className="block px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-foreground"
             >
               {link.label}
