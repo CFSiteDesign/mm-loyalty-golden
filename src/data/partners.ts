@@ -34,7 +34,7 @@ export const areas: Area[] = [
     code: 'SQR',
     name: 'Siquijor',
     partners: [
-      { name: 'Aninag Festival', location: 'Siquijor', link: 'https://aninagfestival.helixpay.ph/', offer: '20% off on tickets: Discount code MADMONKEY20 or walk in present/show wristag is ok, however to cut the queue shorter can buy online' },
+      { name: 'Aninag Festival', location: 'Siquijor', offer: '20% off on tickets: Discount code MADMONKEY20 https://aninagfestival.helixpay.ph/ or walk in present/show wristag is ok, however to cut the queue shorter can buy online' },
     ],
   },
 ];
