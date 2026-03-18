@@ -3,11 +3,11 @@ import { Menu, X } from 'lucide-react';
 import madMonkeyLogo from '@/assets/madmonkey-logo.svg';
 
 const navLinks = [
-  
-  { label: 'Our Story', href: 'https://madmonkeyhostels.com/our-story' },
-  { label: 'Sleep', href: 'https://madmonkeyhostels.com/sleep' },
-  { label: 'Experience', href: 'https://madmonkeyhostels.com/experience' },
-  { label: 'Mad Loyalty', href: 'https://madmonkeyhostels.com/madloyalty' },
+  { label: 'Our Story', href: 'https://madmonkeyhostels.com/our-story', external: true },
+  { label: 'Sleep', href: 'https://madmonkeyhostels.com/sleep', external: true },
+  { label: 'Experience', href: 'https://madmonkeyhostels.com/experience', external: true },
+  { label: 'Mad Loyalty', href: 'https://madmonkeyhostels.com/madloyalty', external: true },
+  { label: 'Partners', href: '/partners', external: false },
 ];
 
 export default function Navbar() {
