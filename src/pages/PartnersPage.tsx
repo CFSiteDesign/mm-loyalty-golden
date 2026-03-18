@@ -114,7 +114,7 @@ function AreaAccordion({ area, isOpen, onToggle }: { area: Area; isOpen: boolean
 }
 
 export default function PartnersPage() {
-  const [openArea, setOpenArea] = useState<string | null>(areas[0]?.code ?? null);
+  const [openArea, setOpenArea] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
