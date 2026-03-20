@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import {
   Sparkles, Scissors, Utensils, Palmtree, Dumbbell, ShoppingBag,
 } from 'lucide-react';
@@ -148,6 +149,21 @@ export default function VIPSection() {
             );
           })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="mt-8 sm:mt-12 text-center"
+        >
+          <Link
+            to="/partners"
+            className="inline-block border-2 border-mad-light/30 text-mad-light px-6 sm:px-10 py-3.5 sm:py-5 rounded-full font-bold text-sm sm:text-lg uppercase tracking-wider hover:border-mad-light/60 hover:bg-mad-light/10 transition-all hover:scale-105 active:scale-95 no-underline"
+          >
+            See Our Partners
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
