@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import {
   Sparkles, Scissors, Utensils, Palmtree, Dumbbell, ShoppingBag,
 } from 'lucide-react';
