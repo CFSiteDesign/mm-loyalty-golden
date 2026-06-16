@@ -11,6 +11,7 @@ export type Partner = {
 export type Area = {
   code: string;
   name: string;
+  country: string;
   partners: Partner[];
 };
 
