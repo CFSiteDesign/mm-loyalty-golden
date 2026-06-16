@@ -138,6 +138,15 @@ export default function PartnersPage() {
 
   const totalPartners = areas.reduce((sum, a) => sum + a.partners.length, 0);
 
+  // Group areas by country
+  const grouped = areas.reduce<Record<string, Area[]>>((acc, area) => {
+    acc[area.country] = acc[area.country] || [];
+    acc[area.country].push(area);
+    return acc;
+  }, {});
+
+  const countries = Object.keys(grouped);
+
   return (
     <div className="min-h-screen bg-mad-dark overflow-hidden">
       <Navbar />
@@ -171,25 +180,36 @@ export default function PartnersPage() {
               <span className="text-transparent bg-clip-text gradient-mad bg-gradient-to-r from-mad-gradient-start to-mad-gradient-end">Works</span>
             </h1>
             <p className="text-sm sm:text-base text-mad-light/50 font-medium max-w-md mx-auto">
-              {totalPartners} local partners across {areas.length} locations. Tap an area to reveal your perks.
+              {totalPartners} local partners across {areas.length} locations in {countries.length} countries. Tap an area to reveal your perks.
             </p>
           </motion.div>
 
-          {/* Area list */}
-          <div className="space-y-3 sm:space-y-4">
-            {areas.map((area, i) => (
-              <motion.div
-                key={area.code}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.06 }}
-              >
-                <AreaAccordion
-                  area={area}
-                  isOpen={openArea === area.code}
-                  onToggle={() => setOpenArea(prev => prev === area.code ? null : area.code)}
-                />
-              </motion.div>
+          {/* Countries & Area list */}
+          <div className="space-y-8 sm:space-y-10">
+            {countries.map((country, ci) => (
+              <div key={country}>
+                <div className="flex items-center gap-3 mb-4 sm:mb-5">
+                  <div className="h-px flex-1 bg-mad-light/10" />
+                  <span className="text-xs sm:text-sm font-bold text-mad-light/40 uppercase tracking-widest">{country}</span>
+                  <div className="h-px flex-1 bg-mad-light/10" />
+                </div>
+                <div className="space-y-3 sm:space-y-4">
+                  {grouped[country].map((area, ai) => (
+                    <motion.div
+                      key={area.code}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: ci * 0.06 + ai * 0.06 }}
+                    >
+                      <AreaAccordion
+                        area={area}
+                        isOpen={openArea === area.code}
+                        onToggle={() => setOpenArea(prev => prev === area.code ? null : area.code)}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
