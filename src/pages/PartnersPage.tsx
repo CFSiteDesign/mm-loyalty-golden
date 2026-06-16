@@ -32,20 +32,39 @@ function PartnerCard({ partner }: { partner: Partner }) {
           )}
         </div>
 
-        {partner.link && (
-          <a
-            href={partner.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 w-8 h-8 rounded-full bg-mad-light/10 flex items-center justify-center text-mad-light/60 hover:bg-mad-purple/30 hover:text-mad-purple transition-colors"
-            aria-label={`Visit ${partner.name}`}
-          >
-            {partner.linkType === 'instagram' ? <Instagram className="w-4 h-4" /> :
-             partner.linkType === 'facebook' ? <FacebookIcon className="w-4 h-4" /> :
-             <ExternalLink className="w-3.5 h-3.5" />}
-          </a>
-        )}
+        <div className="flex flex-col gap-1.5 shrink-0">
+          {partner.link && (
+            <a
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-mad-light/10 flex items-center justify-center text-mad-light/60 hover:bg-mad-purple/30 hover:text-mad-purple transition-colors"
+              aria-label={`Visit ${partner.name}`}
+            >
+              {partner.linkType === 'instagram' ? <Instagram className="w-4 h-4" /> :
+               partner.linkType === 'facebook' ? <FacebookIcon className="w-4 h-4" /> :
+               <ExternalLink className="w-3.5 h-3.5" />}
+            </a>
+          )}
+          {partner.phone && (
+            <a
+              href={`https://wa.me/${partner.phone.replace(/\+/g, '').replace(/\s/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-mad-light/10 flex items-center justify-center text-mad-light/60 hover:bg-mad-green/30 hover:text-mad-green transition-colors"
+              aria-label={`WhatsApp ${partner.name}`}
+            >
+              <Phone className="w-3.5 h-3.5" />
+            </a>
+          )}
+        </div>
       </div>
+
+      {partner.description && (
+        <p className="mt-2 text-[11px] sm:text-xs text-mad-light/60 leading-relaxed">
+          {partner.description}
+        </p>
+      )}
 
       {partner.offer && (
         <div className="mt-3 pt-3 border-t border-mad-light/[0.06]">
