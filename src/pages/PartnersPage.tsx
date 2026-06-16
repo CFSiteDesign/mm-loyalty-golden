@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, ExternalLink, ChevronDown, ArrowLeft, Instagram } from 'lucide-react';
+import { MapPin, ExternalLink, ChevronDown, ArrowLeft, Instagram, Phone } from 'lucide-react';
 import { areas, type Area, type Partner } from '@/data/partners';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/landing/Footer';
@@ -32,20 +32,39 @@ function PartnerCard({ partner }: { partner: Partner }) {
           )}
         </div>
 
-        {partner.link && (
-          <a
-            href={partner.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 w-8 h-8 rounded-full bg-mad-light/10 flex items-center justify-center text-mad-light/60 hover:bg-mad-purple/30 hover:text-mad-purple transition-colors"
-            aria-label={`Visit ${partner.name}`}
-          >
-            {partner.linkType === 'instagram' ? <Instagram className="w-4 h-4" /> :
-             partner.linkType === 'facebook' ? <FacebookIcon className="w-4 h-4" /> :
-             <ExternalLink className="w-3.5 h-3.5" />}
-          </a>
-        )}
+        <div className="flex flex-col gap-1.5 shrink-0">
+          {partner.link && (
+            <a
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-mad-light/10 flex items-center justify-center text-mad-light/60 hover:bg-mad-purple/30 hover:text-mad-purple transition-colors"
+              aria-label={`Visit ${partner.name}`}
+            >
+              {partner.linkType === 'instagram' ? <Instagram className="w-4 h-4" /> :
+               partner.linkType === 'facebook' ? <FacebookIcon className="w-4 h-4" /> :
+               <ExternalLink className="w-3.5 h-3.5" />}
+            </a>
+          )}
+          {partner.phone && (
+            <a
+              href={`https://wa.me/${partner.phone.replace(/\+/g, '').replace(/\s/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-mad-light/10 flex items-center justify-center text-mad-light/60 hover:bg-mad-green/30 hover:text-mad-green transition-colors"
+              aria-label={`WhatsApp ${partner.name}`}
+            >
+              <Phone className="w-3.5 h-3.5" />
+            </a>
+          )}
+        </div>
       </div>
+
+      {partner.description && (
+        <p className="mt-2 text-[11px] sm:text-xs text-mad-light/60 leading-relaxed">
+          {partner.description}
+        </p>
+      )}
 
       {partner.offer && (
         <div className="mt-3 pt-3 border-t border-mad-light/[0.06]">
@@ -152,7 +171,7 @@ export default function PartnersPage() {
               <span className="text-transparent bg-clip-text gradient-mad bg-gradient-to-r from-mad-gradient-start to-mad-gradient-end">Works</span>
             </h1>
             <p className="text-sm sm:text-base text-mad-light/50 font-medium max-w-md mx-auto">
-              {totalPartners} local partners across {areas.length} locations in the Philippines. Tap an area to reveal your perks.
+              {totalPartners} local partners across {areas.length} locations. Tap an area to reveal your perks.
             </p>
           </motion.div>
 
