@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, ExternalLink, ChevronDown, ArrowLeft, Instagram } from 'lucide-react';
+import { MapPin, ExternalLink, ChevronDown, ArrowLeft, Instagram, Phone } from 'lucide-react';
 import { areas, type Area, type Partner } from '@/data/partners';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/landing/Footer';
