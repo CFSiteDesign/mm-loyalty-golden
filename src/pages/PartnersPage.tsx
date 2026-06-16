@@ -171,7 +171,7 @@ export default function PartnersPage() {
               <span className="text-transparent bg-clip-text gradient-mad bg-gradient-to-r from-mad-gradient-start to-mad-gradient-end">Works</span>
             </h1>
             <p className="text-sm sm:text-base text-mad-light/50 font-medium max-w-md mx-auto">
-              {totalPartners} local partners across {areas.length} locations in the Philippines. Tap an area to reveal your perks.
+              {totalPartners} local partners across {areas.length} locations. Tap an area to reveal your perks.
             </p>
           </motion.div>
 
