@@ -19,6 +19,7 @@ export const areas: Area[] = [
   {
     code: 'MNL',
     name: 'Manila',
+    country: 'Philippines',
     partners: [
       { name: 'Skin BLVD Aesthetic Clinic', location: 'Poblacion', link: 'https://www.instagram.com/theskinblvdph/', linkType: 'instagram', offer: '5% off on all services' },
       { name: 'Le Noire', location: 'Makati', link: 'https://www.instagram.com/lanoiremnl/', linkType: 'instagram', offer: 'Free entry' },
@@ -27,6 +28,7 @@ export const areas: Area[] = [
   {
     code: 'SGO',
     name: 'Siargao',
+    country: 'Philippines',
     partners: [
       { name: 'Bar Ciao', location: 'General Luna', link: 'https://www.instagram.com/barciao_iao/', linkType: 'instagram', offer: '5% on F&B' },
       { name: 'Gwapitos', location: 'General Luna', link: 'https://www.instagram.com/gwapitos.official/', linkType: 'instagram', offer: '10% on merch' },
@@ -36,6 +38,7 @@ export const areas: Area[] = [
   {
     code: 'SQR',
     name: 'Siquijor',
+    country: 'Philippines',
     partners: [
       { name: 'Aninag Festival', location: 'Siquijor', offer: '20% off on tickets: Discount code MADMONKEY20 https://aninagfestival.helixpay.ph/ or walk in present/show wristag is ok, however to cut the queue shorter can buy online' },
     ],
@@ -43,6 +46,7 @@ export const areas: Area[] = [
   {
     code: 'NLE',
     name: 'Nusa Lembongan',
+    country: 'Indonesia',
     partners: [
       {
         name: 'Captain Coconut Snorkelling Tour',
@@ -65,6 +69,7 @@ export const areas: Area[] = [
   {
     code: 'PAN',
     name: 'Panglao',
+    country: 'Philippines',
     partners: [
       {
         name: 'Flying Fish Dive Shop',
@@ -79,6 +84,7 @@ export const areas: Area[] = [
   {
     code: 'LPB',
     name: 'Luang Prabang',
+    country: 'Laos',
     partners: [
       {
         name: 'Jambon',
@@ -93,6 +99,7 @@ export const areas: Area[] = [
   {
     code: 'HOI',
     name: 'Hoi An',
+    country: 'Vietnam',
     partners: [
       {
         name: 'Serene Spa Hoi An',
@@ -108,6 +115,7 @@ export const areas: Area[] = [
   {
     code: 'HAN',
     name: 'Hanoi',
+    country: 'Vietnam',
     partners: [
       {
         name: 'Mland - Jewelry Making Workshop',
