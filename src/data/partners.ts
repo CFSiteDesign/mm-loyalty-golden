@@ -137,4 +137,17 @@ export const areas: Area[] = [
       },
     ],
   },
+  {
+    code: 'REP',
+    name: 'Siem Reap',
+    country: 'Cambodia',
+    partners: [
+      { name: 'Blue Spa Siem Reap', location: 'Siem Reap', offer: '15% off all services' },
+      { name: 'The Spa Siem Reap', location: 'Siem Reap', offer: '15% off all services' },
+      { name: 'The Secret Eden Spa', location: 'Siem Reap', offer: '15% off all services' },
+      { name: 'Mizu Spa', location: 'Siem Reap', offer: '15% off all services' },
+      { name: 'Sok Spa', location: 'Siem Reap', offer: '15% off all services' },
+      { name: 'Sol Spa', location: 'Siem Reap', offer: '15% off all services' },
+    ],
+  },
 ];
